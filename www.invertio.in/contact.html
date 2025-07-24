@@ -395,9 +395,14 @@ style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="soc-box dis-flex items-center">                
-                <a href="javascript:void(0)"; onclick="consultCTA_cb();"><i><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/soc-01.svg" alt="invertio" width="20" height="20"></i><span>Book A Call</span></a>
-                <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/soc-02.svg" alt="invertio" width="20" height="20"> </i><span>WhatsApp</span></a>
-                <a href="mailto:sales@invertio.com" target="_blank"><i><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/soc-03.svg" alt="invertio" width="20" height="20"></i><span>Email us</span></a>
+<a href="tel:+917893067967">
+  <i>
+    <img loading="lazy" src="wp-content/themes/invertio/v4.0/images/soc-01.svg" alt="invertio" width="20" height="20">
+  </i>
+  <span>+91 78930 67967</span>
+</a>
+                <a href="https://wa.me/917893067967" target="_blank"><i><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/soc-02.svg" alt="invertio" width="20" height="20"> </i><span>WhatsApp</span></a>
+                <a href="mailto:info@invertiosolutions.com" target="_blank"><i><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/soc-03.svg" alt="invertio" width="20" height="20"></i><span>Email us</span></a>
               </div>
               <form action="https://www.invertio.in/sendmail1.php" enctype="multipart/form-data" method="POST" 
               id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;" accept-charset="UTF-8">
@@ -522,21 +527,21 @@ style="display:none;visibility:hidden"></iframe></noscript>
             <div class="col-box dis-flex">
               <div class="icon"><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/cont-01.svg" alt="pixel" width="40" height="40"></div>
               <div class="desp">
-                <h4>20+ years of experience</h4>
+                <h4>17+ years of experience</h4>
                 <p>We can handle projects of all complexities.</p>
               </div>
             </div>
             <div class="col-box dis-flex">
               <div class="icon"><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/cont-02.svg" alt="pixel" width="40" height="40"></div>
               <div class="desp">
-                <h4>2500+ satisfied customers</h4>
-                <p>Startups to Fortune 500, we have worked with all.</p>
+                <h4>50+ satisfied customers</h4>
+                <!-- <p>Startups to Fortune 500, we have worked with all.</p> -->
               </div>
             </div>
             <div class="col-box dis-flex">
               <div class="icon"><img loading="lazy" src="wp-content/themes/invertio/v4.0/images/cont-03.svg" alt="pixel" width="40" height="40"></div>
               <div class="desp">
-                <h4>675+ in-house team</h4>
+                <h4>25+ in-house team</h4>
                 <p>Top 1% industry talent to ensure your digital success.</p>
               </div>
             </div>
@@ -1197,6 +1202,55 @@ silktideCookieBannerManager.initCookieBanner();
    }
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"96110d805902b22e","version":"2025.7.0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"45e23f5359e047d48e1a0a7be57f1e26","b":1}' crossorigin="anonymous"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contact-form-section');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Prepare form data object (excluding files)
+      const formData = {
+        'fullName': document.getElementById('cont_name').value,
+        'email': document.getElementById('cont_email').value,
+        'country': document.getElementById('cont_country').value,
+        'phone': document.getElementById('cont_phpne').value,
+        'service': document.getElementById('select-wehelp').value,
+        'description': document.getElementById('user-req').value
+        
+      };
+
+      // API endpoint - replace with your actual API URL
+      const apiUrl = 'https://invertio-query.onrender.com/api/query';
+      
+      // Send data to API
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Success:', data);
+        alert('Thank you! Your message has been submitted successfully.');
+        contactForm.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting your form. Please try again.');
+      });
+    });
+  }
+});
+</script>
 </body>
 
 <!-- Mirrored from www.invertio.in/contact by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 10:03:13 GMT -->
