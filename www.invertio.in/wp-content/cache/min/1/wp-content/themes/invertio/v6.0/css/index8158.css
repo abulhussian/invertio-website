@@ -6397,7 +6397,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     height: 3px;
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -14px;
     opacity: 1;
     z-index: 9
 }
