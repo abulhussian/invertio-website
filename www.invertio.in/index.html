@@ -4241,13 +4241,18 @@ function consultCTA_cb(){
       <div class="dis-flex justify-sb">
         <div class="left-box">
           <div class="soc-box dis-flex items-center">
-            <a href="javascript:void(0);" onclick="consultCTA_cb();"><i><img loading="lazy"
-                  src="wp-content/themes/invertio/v6.0/images/home-images/connect-01.svg" alt="invertio" width="20"
-                  height="20"></i><span>Book A Call</span></a>
-            <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy"
+            <a href="tel:+917893067967">
+              <i>
+                <img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/connect-01.svg"
+                  alt="invertio" width="20" height="20">
+              </i>
+              <span>Book A Call</span>
+            </a>
+
+            <a href="https://wa.me/917893067967" target="_blank"><i><img loading="lazy"
                   src="wp-content/themes/invertio/v6.0/images/home-images/connect-02.svg" alt="invertio" width="20"
                   height="20"> </i><span>WhatsApp</span></a>
-            <a href="mailto:sales@invertio.com" target="_blank"><i><img loading="lazy"
+            <a href="mailto:info@invertiosolutions.com" target="_blank"><i><img loading="lazy"
                   src="wp-content/themes/invertio/v6.0/images/home-images/connect-03.svg" alt="invertio" width="20"
                   height="20"></i><span>Email us</span></a>
           </div>
@@ -4259,7 +4264,7 @@ function consultCTA_cb(){
                     src="wp-content/themes/invertio/v6.0/images/home-images/cont-01.svg" alt="pixel" width="40"
                     height="40"></div>
                 <div class="desp">
-                  <h4>20+ years of experience</h4>
+                  <h4>17+ years of experience</h4>
                   <p>We can handle projects of all complexities.</p>
                 </div>
               </div>
@@ -4268,8 +4273,7 @@ function consultCTA_cb(){
                     src="wp-content/themes/invertio/v6.0/images/home-images/cont-02.svg" alt="pixel" width="40"
                     height="40"></div>
                 <div class="desp">
-                  <h4>2500+ satisfied customers</h4>
-                  <p>Startups to Fortune 500, we have worked with all.</p>
+                  <h4>50+ satisfied customers</h4>
                 </div>
               </div>
               <div class="col-box dis-flex">
@@ -4277,7 +4281,7 @@ function consultCTA_cb(){
                     src="wp-content/themes/invertio/v6.0/images/home-images/cont-03.svg" alt="pixel" width="40"
                     height="40"></div>
                 <div class="desp">
-                  <h4>675+ in-house team</h4>
+                  <h4>25+ in-house team</h4>
                   <p>Top 1% industry talent to ensure your digital success.</p>
                 </div>
               </div>
@@ -4301,103 +4305,54 @@ function consultCTA_cb(){
           </div>
         </div>
         <div class="right-box">
-          <form id="contact-form-section" action="https://www.invertio.in/sendmail1.php" class="contact-form-section"
-            enctype="multipart/form-data" method="POST" onsubmit="vcCmnFormValidation(false); return false;">
-            <div class="top-section">
-              <h2> Book Free Consultation</h2>
-              <p>Guaranteed response within 8 business hours.</p>
-            </div>
-            <div class="form-inner dis-flex">
-              <div class="form-text-cont">
-                <div class="user-input">
-                  <label>Full Name</label>
-                  <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field"
-                    value="" name="user-name" />
-                  <small>Error Message</small>
-                </div>
-              </div>
-              <div class="form-text-cont">
-                <div class="user-input">
-                  <label>Email</label>
-                  <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field"
-                    value="" name="user-email" />
-                  <small>Error Message</small>
-                </div>
-              </div>
-              <div class="form-text-cont">
-                <div class="user-input">
-                  <label>Phone No.</label>
-                  <input type="text" autocomplete="off" class="input-field" id="cont_phpne"
-                    placeholder="Phone Number (Optional)" value="" name="user-phone" />
-                  <small>Error Message</small>
-                </div>
-              </div>
-              <div class="form-text-cont cont_country_section">
-                <div class="user-input">
-                  <label>Select Country</label>
-                  <input class="input-field input-skype" autocomplete="off" id="cont_country" type="text"
-                    placeholder="Country" value="" name="user-country" />
-                  <small>Error Message</small>
-                </div>
-              </div>
-              <div class="form-text-cont width-full">
-                <div class="user-input">
-                  <label>Your Requirements</label>
-                  <textarea class="input-field comment-input" autocomplete="off" id="user-req"
-                    placeholder="Project Brief" name="user-req"></textarea>
-                  <small>Error Message</small>
-                  <div class="drop-input attachment_brw" id="uploadcontact">
-                    <div id="dropcontact"></div>
-                  </div>
-                  <div id="drop-area">
-                    <input type="file" name="files[]" id="fileElem" multiple
-                      accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
-                      onchange="handleFiles(this.files)">
-                    <button class="button" id="browse-btn" type="button"
-                      onclick="document.getElementById('fileElem').click()">BROWSE | DROP FILES HERE</button>
-                    <input type="hidden" name="up-counter" id="uplcounter" value="0">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="gloader" class="gal-loader">
-              <div class="loader"></div>
-              <div id="gallery"></div>
-            </div>
-            <p id="file-type-error"></p>
-            <div class="form-group qz-captcha">
-              <div class="qz-wrap">
-                <div class="quizQ">
-                  <span id="j-quiz"></span>
-                  <a href="javascript:void(0);" class="refreshbtn" onclick="generateWsQuiz();"></a>
-                </div>
-                <span class="equal">=</span>
-                <div class="quizAns">
-                  <input type="number" name="captcha" placeholder="??" id="j-quiz-ans"
-                    onkeypress="cap_limit(event, this);">
-                  <span class="error" id="captchaerror"></span>
-                </div>
-              </div>
-              <div class="btn-container">
-                <div class="user-input cta-btn checkout">
-                  <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
-                  <input type="hidden" id="g-recaptcha-response-footer" name="g-recaptcha-response">
-                  <input type="hidden" name="frmqueryString" value="">
-                  <input type="hidden" name="page_url" value="index.html">
-                  <input type="hidden" name="vc_csrf" value="">
+          <form id="contact-form-section" method="POST">
+  <div class="top-section">
+    <h2>Book Free Consultation</h2>
+    <p>Guaranteed response within 8 business hours.</p>
+  </div>
 
-                  <div class="user-input btn rounded checkout">
-                    <input type="submit" id="submitButton" class="cta-button" value="Enquire Now" />
-                    <!--<span class="arrow-wrap">
-                  <span class="arrow primera"></span>
-                  <span class="arrow segunda next"></span>
-                  <span class="arrow last"></span>
-                  </span>-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+  <div class="form-inner dis-flex">
+    <div class="form-text-cont">
+      <label>Full Name</label>
+      <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field" name="user-name" />
+    </div>
+
+    <div class="form-text-cont">
+      <label>Email</label>
+      <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" name="user-email" />
+    </div>
+
+    <div class="form-text-cont">
+      <label>Phone No.</label>
+      <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" name="user-phone" />
+    </div>
+
+    <div class="form-text-cont cont_country_section">
+      <label>Country</label>
+      <input class="input-field" autocomplete="off" id="cont_country" placeholder="Country" name="user-country" />
+    </div>
+
+    <div class="form-text-cont width-full">
+      <label>Your Requirements</label>
+      <textarea class="input-field" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
+    </div>
+  </div>
+
+  <!-- Hidden Fields -->
+  <input type="hidden" name="frmqueryString" value="customQueryStringValue" />
+  <input type="hidden" name="page_url" value="index.html" />
+  <input type="hidden" name="g-recaptcha-response" value="dummy-captcha-token" />
+
+  <!-- Submit Button -->
+  <div class="form-group qz-captcha">
+    <div class="qz-wrap"></div>
+  <div class="contact-us-section btn-container cta-button">
+    <input type="submit" id="submitButton" class="cta-button" value="Enquire Now" />
+  </div>
+  </div>
+ </form>
+
+
         </div>
       </div>
     </div>
@@ -4829,260 +4784,7 @@ function consultCTA_cb(){
   	// }
   }
   
-  const form 			    = document.getElementById('contact-form-section');
-  const username 		  = document.getElementById('cont_name');
-  const email 		    = document.getElementById('cont_email');
-  const phone 		    = document.getElementById('cont_phpne');
-  const countriesData = document.getElementById('cont_country');
-  const uRequirement  = document.getElementById('user-req');
-  const captcha   	  = document.getElementById('j-quiz-ans');
-  
-  //Show input error messages
-  function showError(input, message){
-      const formControl = input.parentElement;
-      formControl.className = 'user-input form-control verror';
-      const small = formControl.querySelector('small');
-      small.innerText = message;
-  }
-  
-  function doNotingonFocus(input) {
-      const formControl = input.parentElement;
-      formControl.className = 'user-input form-control';
-  }
-  
-  //show success colour
-  function showSucces(input){
-  	const formControl = input.parentElement;
-  	const small = formControl.querySelector('small');
-  	formControl.className = 'user-input form-control success';
-  	small.innerText = 'success';
-  }
-  
-  //check email is valid
-  function checkEmail(input) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(re.test(input.value.trim())) {
-          showSucces(input);
-      }else {
-      	if( input.value == '' ){
-      		showError(input,'Please Fill Email');
-      	}else{
-      		showError(input,'Email is not valid');	
-      	}
-      }
-  }
-  
-  function phonenumber(inputtxt){
-  	//console.log( inputtxt.value.trim() );
-  	//console.log( inputtxt.value.length );
-  	//var phoneno = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
-  	//if(phoneno.test(inputtxt.value.trim())) {
-  		
-  	if( (/^[A-Za-z0123456789()\s.+-]+$/.test(inputtxt.value.trim()) && inputtxt.value.length >= 6) ){	
-  		showSucces( inputtxt )
-  	}else{
-  		if( inputtxt.value == '' ){
-      		showError(inputtxt,'Please Fill Phone');
-      	}else{
-      		showError( inputtxt, 'Phone Number is not valid' );
-      	}  		
-  	}
-  }
-  
-  username.addEventListener("keyup", checkUseName);
-  username.addEventListener("keypress", checkUseName);
-  username.addEventListener("keydown", checkUseName);
-  username.addEventListener("focusout", checkUseName);
-  
-  countriesData.addEventListener("keyup", checkCont);
-  countriesData.addEventListener("keypress", checkCont);
-  countriesData.addEventListener("keydown", checkCont);
-  countriesData.addEventListener("focusout", checkCont);
-  
-  /*
-  // Phone Humber Optional
-  phone.addEventListener("keyup", checkPhone);
-  phone.addEventListener("keypress", checkPhone);
-  phone.addEventListener("keydown", checkPhone);
-  phone.addEventListener("focusout", checkPhone);
-  */
-  
-  email.addEventListener("keyup", checkEmailEvent);
-  email.addEventListener("keypress", checkEmailEvent);
-  email.addEventListener("keydown", checkEmailEvent);
-  email.addEventListener("focusout", checkEmailEvent);
-  email.addEventListener("focusin", function(){
-  	doNotingonFocus(email);
-  });
-  
-  captcha.addEventListener("focusout", validateMquiz);
-  
-  uRequirement.addEventListener("keyup", checkURequirement);
-  uRequirement.addEventListener("keypress", checkURequirement);
-  uRequirement.addEventListener("keydown", checkURequirement);
-  uRequirement.addEventListener("focusout", checkURequirement);
-  uRequirement.addEventListener("focusin", checkURequirement);
-  
-  function checkEmailEvent(event){
-  	checkEmail(email);
-  }
-  function checkUseName(event){
-    checkLength(username,3,15);
-  }
-  
-  function checkCont(event){
-    checkLength(countriesData,1,255);
-  }
-  
-  function checkPhone(event){
-    checkLength(phone,10,10);
-    phonenumber(phone);
-  }
-  
-  function checkURequirement(event){
-    if( event.type === "focusout" ){
-      loadReCapJS();
-    }
-    checkLength(uRequirement,3,1500);
-  }
-  
-  
-  //checkRequired fields
-  function checkRequired(inputArr) {
-      inputArr.forEach(function(input){
-      	let e = input.value.trim();
-        if( !/^[A-Za-z0-9!@#$%^&*()".,;:{}<>?\[\]\-+=' ]{2,}/.test(e) ){
-    			if( input.name == "user-name"  ){
-    				showError(input, `Please Fill Name`);
-    			}else if( input.name == "user-req"  ){
-    				showError(input, `Please Fill Requirement`);
-    			}else if( input.name == "user-phone"  ){
-    				showError(input, `Please Fill Phone`);
-    			}else if( input.name == "user-email"  ){
-    				showError(input, `Please Fill Email`);
-    			}else if( input.name == "user-country" ){
-    				showError(input, `Please Fill Country`);	
-    			}else if( input.name == "captcha" ){
-            validateMquiz();
-          }else{
-    				showError(input,`This Field is required`)	
-    			}
-        }else{
-        checkLength(username,3,15);	
-      checkEmail(email);
-      checkLength(countriesData,3,255);
-        
-        checkLength(phone,10,10);
-        //phonenumber(phone); // Optional
-        if( input.name != "captcha" ){
-            //showSucces(input);
-        }
-        }
-      });
-  }
-    
-  //check input Length
-  function checkLength(input, min ,max){
-  	//console.log(input.name);
-    let e = input.value.trim();
-    //if( (input.value.length < min) || (!/^[A-Za-z0-9!@#$%^&*()".,;:{}<>?\[\]\-+=' ]{2,}/.test(e)) ) {
-    if( input.value.length < min ){
-      if( input.name == "user-name" ){
-      	showError(input, `Please Fill Name`);	
-      }else if( input.name == "user-req" ){
-      	showError(input, `Please Fill Requirement`);	
-      }else if( input.name == "user-phone" ){
-      	//showError(input, `Please Fill Phone`);	
-      }else if( input.name == "user-email" ){
-      	showError(input, `Please Fill Email`);	
-      }else if( input.name == "user-country" ){
-      	showError(input, `Please Fill Country`);	
-      }else{
-      	showError(input, `Value must be at least ${min} characters`);
-      }    
-    }else{
-        showSucces(input);
-    }
-  }
-  
-  function validateMquiz(){
-      let que     = document.getElementById("j-quiz").textContent;
-      let ans     = document.getElementById("j-quiz-ans").value;
-      let qerror  = document.getElementById("captchaerror");
-      if( eval(que) == ans ){
-          qerror.textContent = "";
-          return true;
-      }else{
-          qerror.textContent = "Invalid Answer";
-          return false;
-      }
-  }
-  
-  //get FieldName
-  function getFieldName(input) {
-      return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-  }
-  
-  function vcSpaceChecker( input ){
-  	if( !/^[A-Za-z0-9!@#$%^&*()".,;:{}<>?\[\]\-+=' ]{1,}/.test( input ) ){
-  		return false;
-  	}else{
-  		return true;
-  	}
-  }
-  
-  async function vcCmnFormValidation( hasQuiz ){
-  	//checkRequired( [username, email, phone, countriesData, uRequirement, captcha] );
-    checkRequired( [username, email, countriesData, uRequirement, captcha] );
-  	if(
-  		( vcSpaceChecker(email.value.trim()) === true ) && 
-  		( vcSpaceChecker(username.value.trim()) === true ) && 
-  		//( vcSpaceChecker(phone.value.trim()) === true ) && 
-  		( vcSpaceChecker(countriesData.value.trim()) ===true ) && 
-  		( vcSpaceChecker(uRequirement.value.trim()) === true ) &&
-  		( vcSpaceChecker(captcha.value.trim()) === true ) 
-  	){
-  		const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  		if( !sre.test(email.value.trim()) ){
-  		  return false;
-  		}
-  
-      /*
-      const phoneRjx = /^[A-Za-z0123456789()\s.+-]+$/;
-      if( !phoneRjx.test( phone.value.trim() ) ){
-        return false;
-      }
-      */
-  
-  		if( validateMquiz() === false){
-        return false;
-      }
-  
-      let rcToken = new Promise( (resolve, reject) =>{
-      grecaptcha.ready(function(){
-      grecaptcha.execute('6LfpW60nAAAAAO38ivvX-w6ZqaRR4FcrjuaeBc6w', {action:'validate_captcha'}).then(function(token){
-      resolve( token );
-      });
-      });
-      });
-      let pxlToken = await rcToken;
-      if( pxlToken ){
-      let rcFld1 = document.getElementById('g-recaptcha-response-footer');
-          if( rcFld1 ){
-            rcFld1.value = pxlToken;
-          }
-      }
-  
-  		var form 	= document.getElementById("contact-form-section");
-  		var formBtn = document.getElementById("submitButton");
-  		form.classList.add('in-process');
-  		formBtn.value = "Please wait...";
-  		formBtn.disabled = true;
-  		form.submit(); 
-  	}else{
-  		return false;	
-  	}
-  }
+
   
   var jQuizExists = document.getElementById("j-quiz");
   if (jQuizExists) {
@@ -5319,18 +5021,7 @@ function consultCTA_cb(){
         <div class="flex-4 logo-box">
           <h3>PROUDLY BROUGHT TO YOU BY Invertio Solutions</h3>
           <div class="dis-flex">
-            <a href="https://www.invoicera.com/" target="_blank" rel="follow">
-              <picture>
-                <img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/inv-logo.svg" width="156"
-                  height="40" alt="Invoicera">
-              </picture>
-            </a>
-            <a href="https://www.workstatus.io/" target="_blank" rel="follow">
-              <picture>
-                <img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/ws-logo.svg" width="188"
-                  height="26" alt="Workstatus">
-              </picture>
-            </a>
+           
           </div>
         </div>
         <div class="flex-4 social-box">
@@ -5350,8 +5041,8 @@ function consultCTA_cb(){
                   height="29" alt="facebook">
               </picture>
             </a>
-            <a href="https://www.linkedin.com/company/invertio-solutions/" target="_blank"
-              data-wpel-link="external" rel="nofollow external noopener noreferrer">
+            <a href="https://www.linkedin.com/company/invertio-solutions/" target="_blank" data-wpel-link="external"
+              rel="nofollow external noopener noreferrer">
               <picture>
                 <img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/soc-03.svg" width="29"
                   height="29" alt="twitter">
@@ -5364,8 +5055,8 @@ function consultCTA_cb(){
                   height="29" alt="instagram">
               </picture>
             </a>
-            <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank"
-              data-wpel-link="external" rel="nofollow external noopener noreferrer">
+            <a href="https://www.youtube.com/@InvertioSolutions" target="_blank" data-wpel-link="external"
+              rel="nofollow external noopener noreferrer">
               <picture>
                 <img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/soc-05.svg" width="29"
                   height="29" alt="youtube">
@@ -5398,10 +5089,6 @@ function consultCTA_cb(){
           </span>
         </div>
         <div class="flex-4 copyright">
-          <a href="http://www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" target="_blank"
-            title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px; display:block" class="dmca-badge">
-            <img src="../images.dmca.com/Badges/dmca-badge-w200-5x1-06cbc9.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"
-              alt="DMCA.com Protection Status" /></a>
           <script type="rocketlazyloadscript" data-minify="1"
             data-rocket-src="https://www.invertio.in/wp-content/cache/min/1/Badges/DMCABadgeHelper.min.js?ver=1752807194"
             defer> </script>
@@ -5517,48 +5204,18 @@ function consultCTA_cb(){
 "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("index.html")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("index.html")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
 }());
 </script>
-  
+
 
   <script src="wp-content/themes/invertio/js/pe-fixere5db.js" id="pe-fixer-js" defer></script>
 
-
-{/*<script type="rocketlazyloadscript" data-minify="1" defer
-    data-rocket-src="https://www.invertio.in/wp-content/cache/min/1/wp-content/themes/invertio/js/pe-fixer.js?ver=1752807194"
-    id="pe-fixer-js"></script>*/}
-
   <script src="wp-content/themes/invertio/js/glider.min-v2e5db.js" id="vc-glider-js" defer></script>
-   {/* <script type="rocketlazyloadscript" data-minify="1" defer
-    data-rocket-src="https://www.invertio.in/wp-content/cache/min/1/wp-content/themes/invertio/js/glider.min-v2.js?ver=1752807194"
-    id="vc-glider-js"></script>*/} 
 
-  {/*<script type="rocketlazyloadscript" data-minify="1" defer
-    data-rocket-src="../www.invertio.in/wp-content/cache/min/1/ajax/libs/Glide.js/3.0.1/glide.min.js?ver=1752807194"
-    id="vc-glide-js"></script>*/}
-
-      <script src="wp-content/themes/invertio/js/glide-min.js" id="vc-glide-js" defer></script>
-
-  
-
+  <script src="wp-content/themes/invertio/js/glide-min.js" id="vc-glide-js" defer></script>
   <script id="vc-script-js-extra">
     var vcObj = { "tpl_url": "https:\/\/www.invertio.in\/wp-content\/themes\/invertio", "web_url": "https:\/\/www.invertio.in", "admin_ajax": "https:\/\/www.invertio.in\/wp-admin\/admin-ajax.php", "page_tpl": "tpl-homev6.0.php", "is_mobile": "false", "_env": "production" };
   </script>
-
- {/* <script type="rocketlazyloadscript" data-minify="1" defer
-    data-rocket-src="https://www.invertio.in/wp-content/cache/min/1/wp-content/themes/invertio/js/script.js?ver=1752807194"
-    id="vc-script-js"></script>*/}
-  
-   <script src="wp-content/themes/invertio/js/scripte5db.js" id="vc-script-js" defer></script>
-
-  
-
- {/* <script type="rocketlazyloadscript" data-minify="1" defer
-    data-rocket-src="https://www.invertio.in/wp-content/cache/min/1/wp-content/themes/invertio/cookie-consent/silktide-consent-manager.js?ver=1752807195"
-    id="cookie-consent-js"></script>*/}
-
-   <script src="wp-content/cache/min/1/wp-content/themes/invertio/cookie-consent/" id="vc-script-js" defer></script>
-
-  
-
+  <script src="wp-content/themes/invertio/js/scripte5db.js" id="vc-script-js" defer></script>
+  <script src="wp-content/cache/min/1/wp-content/themes/invertio/cookie-consent/" id="vc-script-js" defer></script>
   <script type="rocketlazyloadscript" id="cookie-consent-js-after">
 (function(){
 silktideCookieBannerManager.updateCookieBannerConfig({
@@ -5729,6 +5386,49 @@ silktideCookieBannerManager.initCookieBanner();
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon='{"rayId":"961108f26bf47679","version":"2025.7.0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"45e23f5359e047d48e1a0a7be57f1e26","b":1}'
     crossorigin="anonymous"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contact-form-section');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = {
+        'fullName': document.getElementById('cont_name').value,
+        'email': document.getElementById('cont_email').value,
+        'country': document.getElementById('cont_country').value,
+        'phone': document.getElementById('cont_phpne').value,
+        'description': document.getElementById('user-req').value      };
+
+      const apiUrl = 'https://invertio-query.onrender.com/api/query';
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          console.log('Success:', data);
+          alert('Thank you! Your message has been submitted successfully.');
+          contactForm.reset();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('There was an error submitting your form. Please try again.');
+        });
+    });
+  }
+});
+</script>
+
 </body>
 
 <!-- Mirrored from www.invertio.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 09:47:49 GMT -->
