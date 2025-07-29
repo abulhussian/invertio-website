@@ -2425,19 +2425,136 @@ function consultCTA_cb(){
     <div class="container">
       <div class="dis-flex">
         <div class="left-box">
-          <h1>Software Engineering, Consulting &amp; development</h1>
+          <div class="left-box-inner">
+            <h1 class="heading-line">Custom Software,</h1>
+            <h1 class="heading-line"><span>Reliable teams</span></h1>
+            <h1 class="heading-line">&amp; Scalable solutions</h1>
+          </div>
           <p>We are an award-winning Indian software engineering company focused on providing outsourced software
             development and software engineering teams to our clients globally.</p>
-          <div class="for-client-logo-box  dis-flex">
-            <div class="logo-box logo1"></div>
-            <div class="logo-box logo2"></div>
-            <div class="logo-box logo3"></div>
-            <div class="logo-box logo4"></div>
-          </div>
+
         </div>
+        <div class="right-box-form">
+          <form id="contact-form-section" method="POST">
+            <div class="top-section">
+              <h3>Book Free Consultation</h3>
+            </div>
+
+           <div class="form-inner">
+  <div class="form-row">
+    <div class="form-text-cont">
+      <label for="cont_name">Full Name</label>
+      <input type="text" autocomplete="off" id="cont_name" placeholder="Enter your full name" class="input-field" name="user-name" required />
+    </div>
+    <div class="form-text-cont">
+      <label for="cont_email">Email</label>
+      <input type="email" autocomplete="off" id="cont_email" placeholder="Enter your email address" class="input-field" name="user-email" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-text-cont">
+      <label for="cont_phpne">Phone No. <span class="optional">(Optional)</span></label>
+      <input type="tel" autocomplete="off" id="cont_phpne" placeholder="Phone Number" class="input-field" name="user-phone" />
+    </div>
+    <div class="form-text-cont">
+      <label for="cont_country">Country</label>
+      <input type="text" autocomplete="off" id="cont_country" placeholder="Your country" class="input-field" name="user-country" required />
+    </div>
+  </div>
+  <div class="form-text-cont full-width">
+    <label for="user-req">Your Requirements</label>
+    <textarea id="user-req" placeholder="Briefly describe your project" class="input-field" name="user-req" rows="3" required></textarea>
+  </div>
+              <div class="contact-us-section btn-container cta-button">
+                <input type="submit" id="submitButton" class="cta-button" value="Enquire Now" />
+              </div>
+</div>
+
       </div>
       <a class="scroll-next" href="#serv"><span class="scroll-downicon">scroll down</span></a>
     </div>
+    <div class="clients">
+<!-- Logo (Clickable) -->
+<div class="for-client-logo-KPMG dis-flex" onclick="toggleCaseStudy()">
+  <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/KPMG-color.svg" class="logo-box logo1" alt="KPMG Logo">
+</div>
+
+<!-- Hidden Case Study Section (Initially hidden) -->
+
+            
+    <div class="for-client-logo-samsa  dis-flex">
+            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/samsa-logo.png" class="logo-box logo1"></div>
+    <div class="for-client-logo-studyFox dis-flex">
+            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/studyFox.png" class="logo-box logo1"></div>
+    <div class="for-client-360taxi  dis-flex">
+            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/360Taxi.png" class="logo-box logo1"></div>
+    <div class="for-client-qatared  dis-flex">
+            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/qatareducation-logo.webp" class="logo-box logo1"></div>
+    <div class="for-client-spacetap  dis-flex">
+            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/Spacetap-logo-1.png" class="logo-box logo1"></div>
+          </div>
+          </div>
+          <!-- Full Case Study Block -->
+<div id="kpmgCaseStudy" class="case-study-section">
+  <div class="case-study-container">
+    <h1 class="title">KPMG Digital Transformation Initiative</h1>
+    <h3 class="subtitle">Overview of the Cloud Migration and Automation Strategy</h3>
+
+    <section>
+      <h2>1. Detailed Subject Background</h2>
+      <p>KPMG, a global leader in professional services, sought to modernize their digital infrastructure to meet the demands of a fast-evolving regulatory and business landscape.</p>
+    </section>
+
+    <section>
+      <h2>2. Challenges and Goals</h2>
+      <ul>
+        <li>Legacy systems with limited scalability</li>
+        <li>Regulatory compliance complexities</li>
+        <li>Improve operational efficiency by 30%</li>
+        <li>Establish a secure, AI-powered infrastructure</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Achieved Results</h2>
+      <p>Post-implementation, KPMG experienced a 35% increase in efficiency, enhanced data security, and faster decision-making through automated workflows.</p>
+    </section>
+
+    <section>
+      <h2>4. Testimonials and Visuals</h2>
+      <blockquote>"This transformation has reshaped the way we work and collaborate across departments." — CTO, KPMG</blockquote>
+      <img src="https://via.placeholder.com/800x300" alt="Transformation Visual" class="visual">
+    </section>
+
+    <section>
+      <h2>5. Impact and Future Research</h2>
+      <p>The success of this initiative laid the groundwork for advanced research into predictive analytics and intelligent auditing tools at KPMG.</p>
+    </section>
+
+    <section>
+      <h2>6. Suggested Actions</h2>
+      <p>Organizations facing similar challenges are advised to assess legacy systems and begin phased modernization via secure cloud platforms.</p>
+    </section>
+
+    <section>
+      <h2>7. Cited Sources</h2>
+      <ul>
+        <li>KPMG Annual Report 2023</li>
+        <li>Gartner Cloud Trends Report</li>
+        <li>McKinsey Digital Infrastructure Whitepaper</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Supplementary Material</h2>
+      <p>Access whitepapers, implementation checklists, and webinar recordings in our <a href="#">resources section</a>.</p>
+    </section>
+  </div>
+</div>
+
+</div>
+
   </section>
   <section class="award-section padding-t-50 padding-b-120 ">
     <div class="container">
@@ -4306,51 +4423,55 @@ function consultCTA_cb(){
         </div>
         <div class="right-box">
           <form id="contact-form-section" method="POST">
-  <div class="top-section">
-    <h2>Book Free Consultation</h2>
-    <p>Guaranteed response within 8 business hours.</p>
-  </div>
+            <div class="top-section">
+              <h2>Book Free Consultation</h2>
+              <p>Guaranteed response within 8 business hours.</p>
+            </div>
 
-  <div class="form-inner dis-flex">
-    <div class="form-text-cont">
-      <label>Full Name</label>
-      <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field" name="user-name" />
-    </div>
+            <div class="form-inner dis-flex">
+              <div class="form-text-cont">
+                <label>Full Name</label>
+                <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field"
+                  name="user-name" />
+              </div>
 
-    <div class="form-text-cont">
-      <label>Email</label>
-      <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" name="user-email" />
-    </div>
+              <div class="form-text-cont">
+                <label>Email</label>
+                <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field"
+                  name="user-email" />
+              </div>
 
-    <div class="form-text-cont">
-      <label>Phone No.</label>
-      <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" name="user-phone" />
-    </div>
+              <div class="form-text-cont">
+                <label>Phone No.</label>
+                <input type="text" autocomplete="off" class="input-field" id="cont_phpne"
+                  placeholder="Phone Number (Optional)" name="user-phone" />
+              </div>
 
-    <div class="form-text-cont cont_country_section">
-      <label>Country</label>
-      <input class="input-field" autocomplete="off" id="cont_country" placeholder="Country" name="user-country" />
-    </div>
+              <div class="form-text-cont cont_country_section">
+                <label>Country</label>
+                <input class="input-field" autocomplete="off" id="cont_country" placeholder="Country"
+                  name="user-country" />
+              </div>
 
-    <div class="form-text-cont width-full">
-      <label>Your Requirements</label>
-      <textarea class="input-field" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
-    </div>
-  </div>
+              <div class="form-text-cont width-full">
+                <label>Your Requirements</label>
+                <textarea class="input-field" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
+              </div>
+            </div>
 
-  <!-- Hidden Fields -->
-  <input type="hidden" name="frmqueryString" value="customQueryStringValue" />
-  <input type="hidden" name="page_url" value="index.html" />
-  <input type="hidden" name="g-recaptcha-response" value="dummy-captcha-token" />
+            <!-- Hidden Fields -->
+            <input type="hidden" name="frmqueryString" value="customQueryStringValue" />
+            <input type="hidden" name="page_url" value="index.html" />
+            <input type="hidden" name="g-recaptcha-response" value="dummy-captcha-token" />
 
-  <!-- Submit Button -->
-  <div class="form-group qz-captcha">
-    <div class="qz-wrap"></div>
-  <div class="contact-us-section btn-container cta-button">
-    <input type="submit" id="submitButton" class="cta-button" value="Enquire Now" />
-  </div>
-  </div>
- </form>
+            <!-- Submit Button -->
+            <div class="form-group qz-captcha">
+              <div class="qz-wrap"></div>
+              <div class="contact-us-section btn-container cta-button">
+                <input type="submit" id="submitButton" class="cta-button" value="Enquire Now" />
+              </div>
+            </div>
+          </form>
 
 
         </div>
@@ -5021,7 +5142,7 @@ function consultCTA_cb(){
         <div class="flex-4 logo-box">
           <h3>PROUDLY BROUGHT TO YOU BY Invertio Solutions</h3>
           <div class="dis-flex">
-           
+
           </div>
         </div>
         <div class="flex-4 social-box">
@@ -5387,48 +5508,59 @@ silktideCookieBannerManager.initCookieBanner();
     data-cf-beacon='{"rayId":"961108f26bf47679","version":"2025.7.0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"45e23f5359e047d48e1a0a7be57f1e26","b":1}'
     crossorigin="anonymous"></script>
 
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const contactForm = document.getElementById('contact-form-section');
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactForm = document.getElementById('contact-form-section');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
 
-      const formData = {
-        'fullName': document.getElementById('cont_name').value,
-        'email': document.getElementById('cont_email').value,
-        'country': document.getElementById('cont_country').value,
-        'phone': document.getElementById('cont_phpne').value,
-        'description': document.getElementById('user-req').value      };
+          const formData = {
+            'fullName': document.getElementById('cont_name').value,
+            'email': document.getElementById('cont_email').value,
+            'country': document.getElementById('cont_country').value,
+            'phone': document.getElementById('cont_phpne').value,
+            'description': document.getElementById('user-req').value
+          };
 
-      const apiUrl = 'https://invertio-query.onrender.com/api/query';
+          const apiUrl = 'https://invertio-query.onrender.com/api/query';
 
-      fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-        .then(response => {
-          if (!response.ok) throw new Error('Network response was not ok');
-          return response.json();
-        })
-        .then(data => {
-          console.log('Success:', data);
-          alert('Thank you! Your message has been submitted successfully.');
-          contactForm.reset();
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          alert('There was an error submitting your form. Please try again.');
+          fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+            .then(response => {
+              if (!response.ok) throw new Error('Network response was not ok');
+              return response.json();
+            })
+            .then(data => {
+              console.log('Success:', data);
+              alert('Thank you! Your message has been submitted successfully.');
+              contactForm.reset();
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              alert('There was an error submitting your form. Please try again.');
+            });
         });
+      }
     });
+  </script>
+<script>
+function toggleCaseStudy() {
+  const section = document.getElementById("kpmgCaseStudy");
+  if (section.style.display === "block") {
+    section.style.display = "none";
+  } else {
+    section.style.display = "block";
   }
-});
-</script>
+}
 
+  </script>
 </body>
 
 <!-- Mirrored from www.invertio.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 09:47:49 GMT -->
