@@ -2427,12 +2427,111 @@ function consultCTA_cb(){
       <div class="left-box" id="homepage-hero-text" style="width: 70%; padding-right: 40px;">
         <h1>Software Engineering, Consulting &amp; development</h1>
         <p>We are an award-winning Indian software engineering company focused on providing outsourced software development and software engineering teams to our clients globally.</p>
-        <div class="for-client-logo-box dis-flex">
-          <div class="logo-box logo1"></div>
-          <div class="logo-box logo2"></div>
-          <div class="logo-box logo3"></div>
-          <div class="logo-box logo4"></div>
-        </div>
+        <!-- Logos Section (Unchanged) -->
+<style>
+  .logo-card {
+    display: none;
+  }
+
+  .logo-card:target {
+    display: block;
+  }
+</style>
+
+<!-- Logo Section (Unchanged layout, updated hrefs) -->
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; padding: 10px;">
+
+  <!-- KPMG -->
+  <a href="#kpmg-card" style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/KPMG-color.svg" style="height: 20px; width: auto;" alt="KPMG Logo">
+  </a>
+
+  <!-- Samsa -->
+  <a href="#samsa-card" style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/samsa-logo.png" style="height: 20px; width: auto;" alt="Samsa Logo">
+  </a>
+
+  <!-- StudyFox -->
+  <a href="#studyfox-card" style="display: inline-block; padding: 10px; background-color:white; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/studyFox.png" style="height: 20px; width: auto;" alt="StudyFox Logo">
+  </a>
+
+  <!-- 360Taxi -->
+  <a href="#taxi-card" style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/360Taxi.png" style="height: 20px; width: auto;" alt="360Taxi Logo">
+  </a>
+
+  <!-- Qatar Education -->
+  <a href="#qatar-card" style="display: inline-block; padding: 10px; background-color:white; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/qatareducation-logo.webp" style="height: 20px; width: auto;" alt="Qatar Education Logo">
+  </a>
+
+  <!-- Spacetap -->
+  <a href="#spacetap-card" style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/Spacetap-logo-1.png" style="height: 20px; width: auto;" alt="Spacetap Logo">
+  </a>
+
+</div>
+
+<!-- Cards Section -->
+<div style="padding: 20px; max-width: 700px; margin: auto;">
+
+  <!-- KPMG Card -->
+  <div id="kpmg-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
+    <h3>KPMG Case Study</h3>
+    <p>Details about KPMG project.</p>
+    <a href="#">Close</a>
+  </div>
+
+  <!-- Samsa Card -->
+  <div id="samsa-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
+    <h3>Samsa Project</h3>
+    <p>Details about Samsa’s digital journey.</p>
+    <a href="#">Close</a>
+  </div>
+
+  <!-- StudyFox Card -->
+  <div id="studyfox-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
+    <h3>StudyFox EdTech</h3>
+    <p>StudyFox's education transformation details.</p>
+    <a href="#">Close</a>
+  </div>
+
+  <!-- 360Taxi Card -->
+  <div id="taxi-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
+    <h3>360Taxi App</h3>
+    <p>Details about ride-hailing app features.</p>
+    <a href="#">Close</a>
+  </div>
+
+  <!-- Qatar Education Card -->
+  <div id="qatar-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
+    <h3>Qatar Education</h3>
+    <p>Learning platform implementation info.</p>
+    <a href="#">Close</a>
+  </div>
+
+  <!-- Spacetap Card -->
+  <div id="spacetap-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
+    <h3>Spacetap CRM</h3>
+    <p>Spacetap CRM automation and analytics.</p>
+    <a href="#">Close</a>
+  </div>
+
+</div>
+
       </div>
       
       <!-- Contact Form on Right Side -->
@@ -2539,14 +2638,14 @@ function consultCTA_cb(){
       
       const formData = new FormData(this);
       const data = {
-        name: formData.get('name'),
+        fullName: formData.get('name'),
         email: formData.get('email'),
         phone: formData.get('phone'),
-        requirements: formData.get('requirements')
+        description: formData.get('requirements')
       };
       
       // Replace with your actual API endpoint
-      fetch('/api/contact', {
+      fetch('https://invertio-query.onrender.com/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -2565,6 +2664,8 @@ function consultCTA_cb(){
       });
     });
   </script>
+  
+
 </section>
   <section class="award-section padding-t-50 padding-b-120 ">
     <div class="container">

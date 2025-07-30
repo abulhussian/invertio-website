@@ -1450,7 +1450,7 @@ textarea {
 .for-client-logo-box .logo-box {
     width: 109px;
     height: 57px;
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-partner-logo.png) 0 0 no-repeat;
+    /* background: url(../../../../../../../../themes/invertio/v6.0/images/home-partner-logo.png) 0 0 no-repeat; */
     display: inline-block
 }
 
