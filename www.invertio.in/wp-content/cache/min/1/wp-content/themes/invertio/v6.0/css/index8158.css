@@ -8752,8 +8752,13 @@ body.page-template-template-testimonials .client-video-section iframe,
 }
 
 .hero-section .dis-flex .left-box h1 {
+<<<<<<< HEAD
     font-size: 30px;
     line-height: 1.5;
+=======
+    font-size: 70px;
+    /* line-height: 1.5; */
+>>>>>>> c6f3053c (added cards)
     color: #fff
 }
 
