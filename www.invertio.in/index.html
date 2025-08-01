@@ -2488,44 +2488,7 @@ function consultCTA_cb(){
 </div>
 
 <!-- Cards Section -->
-<div style="padding: 20px; max-width: 700px; margin: auto;">
 
-  <!-- Samsa Card -->
-  <div id="samsa-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
-    <h3>Samsa Project</h3>
-    <p>Details about Samsa’s digital journey.</p>
-    <a href="#">Close</a>
-  </div>
-
-  <!-- StudyFox Card -->
-  <div id="studyfox-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
-    <h3>StudyFox EdTech</h3>
-    <p>StudyFox's education transformation details.</p>
-    <a href="#">Close</a>
-  </div>
-
-  <!-- 360Taxi Card -->
-  <div id="taxi-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
-    <h3>360Taxi App</h3>
-    <p>Details about ride-hailing app features.</p>
-    <a href="#">Close</a>
-  </div>
-
-  <!-- Qatar Education Card -->
-  <div id="qatar-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
-    <h3>Qatar Education</h3>
-    <p>Learning platform implementation info.</p>
-    <a href="#">Close</a>
-  </div>
-
-  <!-- Spacetap Card -->
-  <div id="spacetap-card" class="logo-card" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7;">
-    <h3>Spacetap CRM</h3>
-    <p>Spacetap CRM automation and analytics.</p>
-    <a href="#">Close</a>
-  </div>
-
-</div>
 
       </div>
       
@@ -2662,47 +2625,217 @@ function consultCTA_cb(){
   
 
 </section>
-  <section class="award-section padding-t-50 padding-b-120 ">
-    <div class="container">
-      <div class="top-logo">
-        <div class="text"><i><img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/star-one.svg"
-              width="22" height="20" alt="star"></i>
-          <strong>4.5/5</strong>based on 1200+ reviews on
+<!-- Case Study Cards Section -->
+<section style="width: 100%; background: #f5f8fc; padding: 60px 20px;">
+  <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
+
+    <!-- KPMG Card -->
+    <div id="kpmg-card" class="case-card">
+      <div class="card-left">
+        <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/KPMG-color.svg" alt="KPMG Logo" class="logo">
+        <h2>KPMG Case Study</h2>
+        <h3>Digital Transformation for Global Finance Leader</h3>
+        <p>
+          We partnered with KPMG to develop a comprehensive financial analytics platform that processes over 5 million transactions daily. Our solution integrated legacy systems with modern cloud infrastructure, reducing processing time by 65%.
+        </p>
+        <div class="card-info">
+          <div class="info-box">
+            <strong>Challenge:</strong>
+            <p>Fragmented data systems causing reporting delays and compliance risks.</p>
+          </div>
+          <div class="info-box">
+            <strong>Solution:</strong>
+            <p>Unified data platform with AI-powered analytics and real-time dashboards.</p>
+          </div>
+          <div class="info-box">
+            <strong>Results:</strong>
+            <ul>
+              <li>65% faster reporting</li>
+              <li>99.98% system uptime</li>
+              <li>$4.2M annual savings</li>
+            </ul>
+          </div>
         </div>
-        <div class="awlogo"><a href="#"></a><a href="#"></a><a href="#"></a></div>
       </div>
-      <div class="stats">
-        <div class="stat">
-          <h2>675+</h2>
-          <p>Developers</p>
+      <div class="card-right">
+        <div class="carousel">
+          <div class="slide"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Slide 1" /></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Slide 2" /></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Slide 3" /></div>
         </div>
-        <div class="stat">
-          <h2>4200+</h2>
-          <p>Projects Delivered</p>
-        </div>
-        <div class="stat">
-          <h2>97%</h2>
-          <p>Client Satisfaction</p>
-        </div>
-      </div>
-      <div class="bottom-section">
-        <div class="bottom-card">
-          <picture><img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/award-01.svg" width="285"
-              height="197" alt="invertio"></picture>
-        </div>
-        <div class="bottom-card highlight">
-          <h4>Trusted By</h4>
-          <h2>2500 <br>Companies</h2>
-          <p>Globally</p>
-          <a href="testimonials.html" class="is-arrow">See our clients</a>
-        </div>
-        <div class="bottom-card">
-          <picture><img loading="lazy" src="wp-content/themes/invertio/v6.0/images/home-images/award-02.svg" width="285"
-              height="170" alt="invertio"></picture>
-        </div>
+        <a onclick="changeSlide('kpmg', -1)" class="arrow left">&#10094;</a>
+        <a onclick="changeSlide('kpmg', 1)" class="arrow right">&#10095;</a>
       </div>
     </div>
-  </section>
+
+    <!-- Sample for Other Cards (repeat for each client) -->
+    <div id="samsa-card" class="logo-card-simple">
+      <h3>Samsa Project</h3>
+      <p>Details about Samsa’s digital journey.</p>
+      <a href="#">Close</a>
+    </div>
+
+    <div id="studyfox-card" class="logo-card-simple">
+      <h3>StudyFox EdTech</h3>
+      <p>StudyFox's education transformation details.</p>
+      <a href="#">Close</a>
+    </div>
+
+    <div id="taxi-card" class="logo-card-simple">
+      <h3>360Taxi App</h3>
+      <p>Details about ride-hailing app features.</p>
+      <a href="#">Close</a>
+    </div>
+
+    <div id="qatar-card" class="logo-card-simple">
+      <h3>Qatar Education</h3>
+      <p>Learning platform implementation info.</p>
+      <a href="#">Close</a>
+    </div>
+
+    <div id="spacetap-card" class="logo-card-simple">
+      <h3>Spacetap CRM</h3>
+      <p>Spacetap CRM automation and analytics.</p>
+      <a href="#">Close</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .case-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .card-left {
+    flex: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
+  }
+
+  .card-left h2 {
+    color: #00338D;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .card-left h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .card-left p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .card-info .info-box {
+    background: #e6f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card-info ul {
+    margin: 5px 0 0 20px;
+    color: #555;
+    padding-left: 16px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .card-right {
+    flex: 1;
+    position: relative;
+    min-height: 300px;
+    background: #000;
+  }
+
+  .carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .logo-card-simple {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .logo-card-simple h3 {
+    color: #00338D;
+  }
+
+  .logo-card-simple a {
+    margin-top: 10px;
+    display: inline-block;
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  .logo-card-simple a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .case-card {
+      flex-direction: column;
+    }
+
+    .card-right {
+      min-height: 200px;
+    }
+  }
+</style>
+
+  
   <section class="tabs-section padding-t-120 padding-b-120" id="tabs-section-1">
     <div class="container">
       <div class="tab-flex">
