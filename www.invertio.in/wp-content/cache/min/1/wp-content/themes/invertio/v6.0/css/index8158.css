@@ -3625,7 +3625,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 }
 
 .service-scroller .service-wrap .left-panel .ser-button {
-    margin: 40px 0 0;
+    margin: 20px 0 0;
     background: #fafafa;
     border: 1px solid #eaeaea;
     padding: 30px;
@@ -3915,7 +3915,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         gap: 0;
         flex-wrap: wrap;
         border-radius: 20px;
-        padding: 15px
+        /* padding: 15px */
     }
 
     .service-scroller .service-wrap .left-panel {
@@ -7150,7 +7150,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         width: 100%;
         background: #1d1c39;
         z-index: 99;
-        padding: 10px 0
+        padding: 10px 0 !important;
     }
 
     .header-two .header-item-left {
@@ -7519,7 +7519,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         position: fixed;
         width: 100%;
         height: 100%;
-        top: 88px;
+        top: 80px;
         left: 0;
         background: #1d1c39;
         padding: 0 20px;
