@@ -10,8 +10,7 @@
   <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
   <script>class RocketLazyLoadScripts { constructor() { this.v = "1.2.5.1", this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this._triggerListener.bind(this), this.touchStartHandler = this._onTouchStart.bind(this), this.touchMoveHandler = this._onTouchMove.bind(this), this.touchEndHandler = this._onTouchEnd.bind(this), this.clickHandler = this._onClick.bind(this), this.interceptedClicks = [], this.interceptedClickListeners = [], this._interceptClickListeners(this), window.addEventListener("pageshow", e => { this.persisted = e.persisted, this.everythingLoaded && this._triggerLastFunctions() }), document.addEventListener("DOMContentLoaded", () => { this._preconnect3rdParties() }), this.delayedScripts = { normal: [], async: [], defer: [] }, this.trash = [], this.allJQueries = [] } _addUserInteractionListener(e) { if (document.hidden) { e._triggerListener(); return } this.triggerEvents.forEach(t => window.addEventListener(t, e.userEventHandler, { passive: !0 })), window.addEventListener("touchstart", e.touchStartHandler, { passive: !0 }), window.addEventListener("mousedown", e.touchStartHandler), document.addEventListener("visibilitychange", e.userEventHandler) } _removeUserInteractionListener() { this.triggerEvents.forEach(e => window.removeEventListener(e, this.userEventHandler, { passive: !0 })), document.removeEventListener("visibilitychange", this.userEventHandler) } _onTouchStart(e) { "HTML" !== e.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.addEventListener("mousemove", this.touchMoveHandler), e.target.addEventListener("click", this.clickHandler), this._disableOtherEventListeners(e.target, !0), this._renameDOMAttribute(e.target, "onclick", "rocket-onclick"), this._pendingClickStarted()) } _onTouchMove(e) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler), e.target.removeEventListener("click", this.clickHandler), this._disableOtherEventListeners(e.target, !1), this._renameDOMAttribute(e.target, "rocket-onclick", "onclick"), this._pendingClickFinished() } _onTouchEnd() { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler) } _onClick(e) { e.target.removeEventListener("click", this.clickHandler), this._disableOtherEventListeners(e.target, !1), this._renameDOMAttribute(e.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(e), e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), this._pendingClickFinished() } _replayClicks() { window.removeEventListener("touchstart", this.touchStartHandler, { passive: !0 }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach(e => { e.target.dispatchEvent(new MouseEvent("click", { view: e.view, bubbles: !0, cancelable: !0 })) }) } _interceptClickListeners(e) { EventTarget.prototype.addEventListenerBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (t, i, r) { "click" !== t || e.windowLoaded || i === e.clickHandler || e.interceptedClickListeners.push({ target: this, func: i, options: r }), (this || window).addEventListenerBase(t, i, r) } } _disableOtherEventListeners(e, t) { this.interceptedClickListeners.forEach(i => { i.target === e && (t ? e.removeEventListener("click", i.func, i.options) : e.addEventListener("click", i.func, i.options)) }), e.parentNode !== document.documentElement && this._disableOtherEventListeners(e.parentNode, t) } _waitForPendingClicks() { return new Promise(e => { this._isClickPending ? this._pendingClickFinished = e : e() }) } _pendingClickStarted() { this._isClickPending = !0 } _pendingClickFinished() { this._isClickPending = !1 } _renameDOMAttribute(e, t, i) { e.hasAttribute && e.hasAttribute(t) && (event.target.setAttribute(i, event.target.getAttribute(t)), event.target.removeAttribute(t)) } _triggerListener() { this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow() } _preconnect3rdParties() { let e = []; document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t => { let i = t.getAttribute("data-rocket-src"); if (i && 0 !== i.indexOf("data:")) { 0 === i.indexOf("//") && (i = location.protocol + i); try { let r = new URL(industries / isv - software - development - services.html).origin; r !== location.origin && e.push({ src: r, crossOrigin: t.crossOrigin || "module" === t.getAttribute("data-rocket-type") }) } catch (n) { } } }), e = [...new Map(e.map(e => [JSON.stringify(e), e])).values()], this._batchInjectResourceHints(e, "preconnect") } async _loadEverythingNow() { this.lastBreath = Date.now(), this._delayEventListeners(this), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal), await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async); try { await this._triggerDOMContentLoaded(), await this._pendingWebpackRequests(this), await this._triggerWindowLoad() } catch (e) { console.error(e) } window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this._waitForPendingClicks().then(() => { this._replayClicks() }), this._emptyTrash() } _registerAllDelayedScripts() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e => { e.hasAttribute("data-rocket-src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) : this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e) }) } async _transformScript(e) { if (await this._littleBreath(), !0 === e.noModule && "noModule" in HTMLScriptElement.prototype) { e.setAttribute("data-rocket-status", "skipped"); return } return new Promise(t => { let i; function r() { (i || e).setAttribute("data-rocket-status", "executed"), t() } try { if (navigator.userAgent.indexOf("Firefox/index.html") > 0 || "" === navigator.vendor) i = document.createElement("script"), [...e.attributes].forEach(e => { let t = e.nodeName; "type" !== t && ("data-rocket-type" === t && (t = "type"), "data-rocket-src" === t && (t = "src"), i.setAttribute(t, e.nodeValue)) }), e.text && (i.text = e.text), i.hasAttribute("src") ? (i.addEventListener("load", r), i.addEventListener("error", function () { i.setAttribute("data-rocket-status", "failed"), t() }), setTimeout(() => { i.isConnected || t() }, 1)) : (i.text = e.text, r()), e.parentNode.replaceChild(i, e); else { let n = e.getAttribute("data-rocket-type"), s = e.getAttribute("data-rocket-src"); n ? (e.type = n, e.removeAttribute("data-rocket-type")) : e.removeAttribute("type"), e.addEventListener("load", r), e.addEventListener("error", function () { e.setAttribute("data-rocket-status", "failed"), t() }), s ? (e.removeAttribute("data-rocket-src"), e.src = s) : e.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(e.text))) } } catch (a) { e.setAttribute("data-rocket-status", "failed"), t() } }) } async _loadScriptsFromList(e) { let t = e.shift(); return t && t.isConnected ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve() } _preloadAllScripts() { this._batchInjectResourceHints([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } _batchInjectResourceHints(e, t) { var i = document.createDocumentFragment(); e.forEach(e => { let r = e.getAttribute && e.getAttribute("data-rocket-src") || e.src; if (r) { let n = document.createElement("link"); n.href = r, n.rel = t, "preconnect" !== t && (n.as = "script"), e.getAttribute && "module" === e.getAttribute("data-rocket-type") && (n.crossOrigin = !0), e.crossOrigin && (n.crossOrigin = e.crossOrigin), e.integrity && (n.integrity = e.integrity), i.appendChild(n), this.trash.push(n) } }), document.head.appendChild(i) } _delayEventListeners(e) { let t = {}; function i(i, r) { return t[r].eventsToRewrite.indexOf(i) >= 0 && !e.everythingLoaded ? "rocket-" + i : i } function r(e, r) { var n; !t[n = e] && (t[n] = { originalFunctions: { add: n.addEventListener, remove: n.removeEventListener }, eventsToRewrite: [] }, n.addEventListener = function () { arguments[0] = i(arguments[0], n), t[n].originalFunctions.add.apply(n, arguments) }, n.removeEventListener = function () { arguments[0] = i(arguments[0], n), t[n].originalFunctions.remove.apply(n, arguments) }), t[e].eventsToRewrite.push(r) } function n(t, i) { let r = t[i]; t[i] = null, Object.defineProperty(t, i, { get: () => r || function () { }, set(n) { e.everythingLoaded ? r = n : t["rocket" + i] = r = n } }) } r(document, "DOMContentLoaded"), r(window, "DOMContentLoaded"), r(window, "load"), r(window, "pageshow"), r(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } _delayJQueryReady(e) { let t; function i(t) { return e.everythingLoaded ? t : t.split(" ").map(e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e).join(" ") } function r(r) { if (r && r.fn && !e.allJQueries.includes(r)) { r.fn.ready = r.fn.init.prototype.ready = function (t) { return e.domReadyFired ? t.bind(document)(r) : document.addEventListener("rocket-DOMContentLoaded", () => t.bind(document)(r)), r([]) }; let n = r.fn.on; r.fn.on = r.fn.init.prototype.on = function () { return this[0] === window && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach(e => { let t = arguments[0][e]; delete arguments[0][e], arguments[0][i(e)] = t })), n.apply(this, arguments), this }, e.allJQueries.push(r) } t = r } r(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => t, set(e) { r(e) } }) } async _pendingWebpackRequests(e) { let t = document.querySelector("script[data-webpack]"); async function i() { return new Promise(e => { t.addEventListener("load", e), t.addEventListener("error", e) }) } t && (await i(), await e._requestAnimFrame(), await e._pendingWebpackRequests(e)) } async _triggerDOMContentLoaded() { this.domReadyFired = !0, await this._littleBreath(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._littleBreath(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this._littleBreath(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._littleBreath(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } async _triggerWindowLoad() { await this._littleBreath(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._littleBreath(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this._littleBreath(), window.dispatchEvent(new Event("rocket-load")), await this._littleBreath(), window.rocketonload && window.rocketonload(), await this._littleBreath(), this.allJQueries.forEach(e => e(window).trigger("rocket-jquery-load")), await this._littleBreath(); let e = new Event("rocket-pageshow"); e.persisted = this.persisted, window.dispatchEvent(e), await this._littleBreath(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }), this.windowLoaded = !0 } _triggerLastFunctions() { document.onreadystatechange && document.onreadystatechange(), window.onload && window.onload(), window.onpageshow && window.onpageshow({ persisted: this.persisted }) } _handleDocumentWrite() { let e = new Map; document.write = document.writeln = function (t) { let i = document.currentScript; i || console.error("WPRocket unable to document.write this: " + t); let r = document.createRange(), n = i.parentElement, s = e.get(i); void 0 === s && (s = i.nextSibling, e.set(i, s)); let a = document.createDocumentFragment(); r.setStart(a, 0), a.appendChild(r.createContextualFragment(t)), n.insertBefore(a, s) } } async _littleBreath() { Date.now() - this.lastBreath > 45 && (await this._requestAnimFrame(), this.lastBreath = Date.now()) } async _requestAnimFrame() { return document.hidden ? new Promise(e => setTimeout(e)) : new Promise(e => requestAnimationFrame(e)) } _emptyTrash() { this.trash.forEach(e => e.remove()) } static run() { let e = new RocketLazyLoadScripts; e._addUserInteractionListener(e) } } RocketLazyLoadScripts.run();</script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="google-site-verification" content="x4jenxWHytNYoiEQI40yqtoX1fPPrGYhHxi8ahcm9FY" />
   <meta name='dmca-site-verification' content='VFdhN2tJNkQ5ckFiQmU3NkZIZlJuYkwzaDZvWHBKRXdud3VjZ2x3VEgxVT01' />
@@ -2428,40 +2427,26 @@ function consultCTA_cb(){
       <div class="left-box" id="homepage-hero-text" style="width: 70%; padding-right: 40px;">
         <h1>Custom Software,</h1> <h1>  Reliable Remote Teams &</h1> <h1>  Scalable Solutions for your Needs</h1>
         <p>We are an award-winning Indian software engineering company focused on providing outsourced software development and software engineering teams to our clients globally.</p>
-        
-        <!-- Logos Section -->
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; padding: 10px;">
-          <!-- KPMG -->
-          <a style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
-             onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
-             onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'"
-             onclick="scrollToCard('kpmg-card')">
-            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/KPMG-color.svg" style="height: 20px; width: auto;" alt="KPMG Logo">
-          </a>
+        <!-- Logos Section (Unchanged) -->
+<style>
+  .logo-card {
+    display: none;
+  }
 
-          <!-- Smsa -->
-          <a style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
-             onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
-             onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'"
-             onclick="scrollToCard('samsa-card')">
-            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/samsa-logo.png" style="height: 20px; width: auto;" alt="Samsa Logo">
-          </a>
+  .logo-card:target {
+    display: block;
+  }
+</style>
 
-          <!-- StudyFox -->
-          <a style="display: inline-block; padding: 10px; background-color:white; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
-             onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
-             onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'"
-             onclick="scrollToCard('studyfox-card')">
-            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/studyFox.png" style="height: 20px; width: auto;" alt="StudyFox Logo">
-          </a>
+<!-- Logo Section (Unchanged layout, updated hrefs) -->
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; padding: 10px;">
 
-          <!-- 360Taxi -->
-          <a style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
-             onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
-             onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'"
-             onclick="scrollToCard('taxi-card')">
-            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/360Taxi.png" style="height: 20px; width: auto;" alt="360Taxi Logo">
-          </a>
+  <!-- KPMG -->
+  <a href="#kpmg-card" style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
+     onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
+     onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'">
+    <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/KPMG-color.svg" style="height: 20px; width: auto;" alt="KPMG Logo">
+  </a>
 
   <!-- Samsa -->
   <a href="#samsa-card" style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
@@ -2540,20 +2525,12 @@ function consultCTA_cb(){
 
 </div>
 
-          <!-- Spacetap -->
-          <a style="display: inline-block; padding: 10px; background-color:#05164d; border: 1px solid #eee; border-radius: 8px; transition: all 0.3s ease; cursor: pointer;"
-             onmouseover="this.style.border='1px solid #00ffff'; this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.4)'"
-             onmouseout="this.style.border='1px solid #eee'; this.style.boxShadow='none'"
-             onclick="scrollToCard('spacetap-card')">
-            <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/Spacetap-logo-1.png" style="height: 20px; width: auto;" alt="Spacetap Logo">
-          </a>
-        </div>
       </div>
       
       <!-- Contact Form on Right Side -->
-      <div class="right-box" id="homepage-hero-form" style="width: 30%; background: rgba(255, 255, 255, 1);  border-radius: 25px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); position: relative; z-index: 10; margin-right: 10px;">
+      <div class="right-box" id="homepage-hero-form" style="width: 30%; background: rgba(255, 255, 255, 1);  border-radius: 25px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); position: relative; z-index: 10;">
         <div style="padding: 30px; background-color: #fcb900;  border-top-left-radius: 25px; border-top-right-radius: 25px; display: flex; justify-content: center;">
-          <h3 style="font-size: 24px; margin-bottom: 20px; background-color: #fcb900; ; color: #05164d;">Get a Free Consultation</h3>
+        <h3 style="font-size: 24px; margin-bottom: 20px; background-color: #fcb900; ; color: #05164d;">Get a Free Consultation</h3>
         </div>
         <form id="heroContactForm" style="padding: 20px;">
           <div class="form-group" style="margin-bottom: 15px;">
@@ -2569,499 +2546,120 @@ function consultCTA_cb(){
             <textarea name="requirements" placeholder="Project Requirements" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box; resize: vertical; position: relative; z-index: 11;"></textarea>
           </div>
           <div style="display: flex; justify-content: center; align-items: center;">
-            <button type="submit" class="cta-button" style="background: #fcb900; color:  #05164d;  text-align: center; border: none; padding: 15px 25px; border-radius:50px ; cursor: pointer; font-size: 16px; font-weight: 600; width: 40%; transition: background 0.3s ease; position: relative; z-index: 11;">Submit Request</button>
-          </div>
-        </form>
+          <button type="submit" class="cta-button" style="background: #fcb900; color:  #05164d;  text-align: center; border: none; padding: 15px 25px; border-radius:50px ; cursor: pointer; font-size: 16px; font-weight: 600; width: 40%; transition: background 0.3s ease; position: relative; z-index: 11;">Submit Request</button>
+        </div>
+          </form>
       </div>
     </div>
     <a class="scroll-next" href="#serv"><span class="scroll-downicon">scroll down</span></a>
   </div>
-</section>
-
-<!-- Case Study Cards Section -->
-<section class="case-studies-section" style="background: #f8f9fa; padding: 60px 0;">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div class="case-studies-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-      
-      <!-- KPMG Card -->
-      <div id="kpmg-card" class="case-study-card" style="background-color: #05164d; border-radius: 15px; box-shadow: 0 0 20px rgba(0,255,255,0.3); overflow: hidden; transition: transform 0.3s ease;">
-        <div class="card-header" style="border-bottom: 1px solid #00ffff; padding: 20px;">
-          <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/KPMG-color.svg" style="height: 40px; margin-bottom: 15px;" alt="KPMG Logo">
-          <h2 style="color: #fcb900; margin: 0;">KPMG Case Study</h2>
-        </div>
-        
-        <div class="card-carousel" style="position: relative;">
-          <div class="carousel-slides" id="kpmg-slides" style="display: flex; overflow: hidden;">
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="KPMG Project Image 1">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="KPMG Project Image 2">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="KPMG Project Image 3">
-            </div>
-          </div>
-          
-          <a class="carousel-prev" onclick="changeSlide('kpmg', -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10094;</a>
-          <a class="carousel-next" onclick="changeSlide('kpmg', 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10095;</a>
-        </div>
-        
-        <div class="card-body" style="color: white; padding: 20px;">
-          <h3 style="color: #00ffff; margin-top: 0;">Digital Transformation for Global Finance Leader</h3>
-          <p>We partnered with KPMG to develop a comprehensive financial analytics platform that processes over 5 million transactions daily. Our solution integrated legacy systems with modern cloud infrastructure, reducing processing time by 65%.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;">
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Challenge</h4>
-              <p style="margin: 0;">Fragmented data systems causing reporting delays and compliance risks</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Solution</h4>
-              <p style="margin: 0;">Unified data platform with AI-powered analytics and real-time dashboards</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Results</h4>
-              <ul style="padding-left: 20px; margin: 0;">
-                <li>65% faster reporting</li>
-                <li>99.98% system uptime</li>
-                <li>$4.2M annual savings</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Samsa Card -->
-      <div id="samsa-card" class="case-study-card" style="background-color: #05164d; border-radius: 15px; box-shadow: 0 0 20px rgba(0,255,255,0.3); overflow: hidden; transition: transform 0.3s ease;">
-        <div class="card-header" style="border-bottom: 1px solid #00ffff; padding: 20px;">
-          <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/samsa-logo.png" style="height: 40px; margin-bottom: 15px;" alt="Samsa Logo">
-          <h2 style="color: #fcb900; margin: 0;">Smsa Case Study</h2>
-        </div>
-        
-        <div class="card-carousel" style="position: relative;">
-          <div class="carousel-slides" id="samsa-slides" style="display: flex; overflow: hidden;">
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="Samsa Project Image 1">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="Samsa Project Image 2">
-            </div>
-          </div>
-          
-          <a class="carousel-prev" onclick="changeSlide('samsa', -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10094;</a>
-          <a class="carousel-next" onclick="changeSlide('samsa', 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10095;</a>
-        </div>
-        
-        <div class="card-body" style="color: white; padding: 20px;">
-          <h3 style="color: #00ffff; margin-top: 0;">Enterprise Analytics Platform</h3>
-          <p>Built a comprehensive analytics solution for Samsa that streamlined their data processing workflows and improved decision-making capabilities across multiple departments.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;">
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Challenge</h4>
-              <p style="margin: 0;">Disconnected analytics tools and manual reporting processes</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Solution</h4>
-              <p style="margin: 0;">Integrated analytics platform with automated reporting and ML insights</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Results</h4>
-              <ul style="padding-left: 20px; margin: 0;">
-                <li>80% reduction in manual work</li>
-                <li>Real-time dashboard insights</li>
-                <li>Improved data accuracy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- StudyFox Card -->
-      <div id="studyfox-card" class="case-study-card" style="background-color: #05164d; border-radius: 15px; box-shadow: 0 0 20px rgba(0,255,255,0.3); overflow: hidden; transition: transform 0.3s ease;">
-        <div class="card-header" style="border-bottom: 1px solid #00ffff; padding: 20px;">
-          <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/studyFox.png" style="height: 40px; margin-bottom: 15px;" alt="StudyFox Logo">
-          <h2 style="color: #fcb900; margin: 0;">StudyFox Case Study</h2>
-        </div>
-        
-        <div class="card-carousel" style="position: relative;">
-          <div class="carousel-slides" id="studyfox-slides" style="display: flex; overflow: hidden;">
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="StudyFox Project Image 1">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="StudyFox Project Image 2">
-            </div>
-          </div>
-          
-          <a class="carousel-prev" onclick="changeSlide('studyfox', -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10094;</a>
-          <a class="carousel-next" onclick="changeSlide('studyfox', 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10095;</a>
-        </div>
-        
-        <div class="card-body" style="color: white; padding: 20px;">
-          <h3 style="color: #00ffff; margin-top: 0;">Educational Technology Platform</h3>
-          <p>Developed an innovative learning management system for StudyFox that revolutionized online education delivery with interactive features and personalized learning paths.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;">
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Challenge</h4>
-              <p style="margin: 0;">Need for scalable online learning platform with engagement features</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Solution</h4>
-              <p style="margin: 0;">Interactive LMS with AI-powered recommendations and progress tracking</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Results</h4>
-              <ul style="padding-left: 20px; margin: 0;">
-                <li>300% increase in user engagement</li>
-                <li>Personalized learning experiences</li>
-                <li>95% student satisfaction rate</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 360Taxi Card -->
-      <div id="taxi-card" class="case-study-card" style="background-color: #05164d; border-radius: 15px; box-shadow: 0 0 20px rgba(0,255,255,0.3); overflow: hidden; transition: transform 0.3s ease;">
-        <div class="card-header" style="border-bottom: 1px solid #00ffff; padding: 20px;">
-          <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/360Taxi.png" style="height: 40px; margin-bottom: 15px;" alt="360Taxi Logo">
-          <h2 style="color: #fcb900; margin: 0;">360Taxi Case Study</h2>
-        </div>
-        
-        <div class="card-carousel" style="position: relative;">
-          <div class="carousel-slides" id="taxi-slides" style="display: flex; overflow: hidden;">
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="360Taxi Project Image 1">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="360Taxi Project Image 2">
-            </div>
-          </div>
-          
-          <a class="carousel-prev" onclick="changeSlide('taxi', -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10094;</a>
-          <a class="carousel-next" onclick="changeSlide('taxi', 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10095;</a>
-        </div>
-        
-        <div class="card-body" style="color: white; padding: 20px;">
-          <h3 style="color: #00ffff; margin-top: 0;">Smart Transportation Solution</h3>
-          <p>Created a comprehensive ride-hailing platform for 360Taxi with real-time tracking, dynamic pricing, and intelligent dispatch algorithms to optimize urban transportation.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;">
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Challenge</h4>
-              <p style="margin: 0;">Efficient ride matching and route optimization in busy urban areas</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Solution</h4>
-              <p style="margin: 0;">AI-powered dispatch system with real-time GPS tracking and smart routing</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Results</h4>
-              <ul style="padding-left: 20px; margin: 0;">
-                <li>40% reduction in wait times</li>
-                <li>25% improvement in route efficiency</li>
-                <li>Enhanced user experience</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Qatar Education Card -->
-      <div id="qatar-card" class="case-study-card" style="background-color: #05164d; border-radius: 15px; box-shadow: 0 0 20px rgba(0,255,255,0.3); overflow: hidden; transition: transform 0.3s ease;">
-        <div class="card-header" style="border-bottom: 1px solid #00ffff; padding: 20px;">
-          <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/qatareducation-logo.webp" style="height: 40px; margin-bottom: 15px;" alt="Qatar Education Logo">
-          <h2 style="color: #fcb900; margin: 0;">Qatar Education Case Study</h2>
-        </div>
-        
-        <div class="card-carousel" style="position: relative;">
-          <div class="carousel-slides" id="qatar-slides" style="display: flex; overflow: hidden;">
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="Qatar Education Project Image 1">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="Qatar Education Project Image 2">
-            </div>
-          </div>
-          
-          <a class="carousel-prev" onclick="changeSlide('qatar', -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10094;</a>
-          <a class="carousel-next" onclick="changeSlide('qatar', 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10095;</a>
-        </div>
-        
-        <div class="card-body" style="color: white; padding: 20px;">
-          <h3 style="color: #00ffff; margin-top: 0;">National Education Management System</h3>
-          <p>Developed a comprehensive education management platform for Qatar Education that digitized student records, automated administrative processes, and enhanced educational outcomes nationwide.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;">
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Challenge</h4>
-              <p style="margin: 0;">Manual processes and fragmented student information systems</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Solution</h4>
-              <p style="margin: 0;">Unified digital platform with automated workflows and data analytics</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Results</h4>
-              <ul style="padding-left: 20px; margin: 0;">
-                <li>70% reduction in administrative time</li>
-                <li>Centralized student data management</li>
-                <li>Improved educational insights</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Spacetap Card -->
-      <div id="spacetap-card" class="case-study-card" style="background-color: #05164d; border-radius: 15px; box-shadow: 0 0 20px rgba(0,255,255,0.3); overflow: hidden; transition: transform 0.3s ease;">
-        <div class="card-header" style="border-bottom: 1px solid #00ffff; padding: 20px;">
-          <img src="../www.invertio.in/wp-content/themes/invertio/v6.0/images/Spacetap-logo-1.png" style="height: 40px; margin-bottom: 15px;" alt="Spacetap Logo">
-          <h2 style="color: #fcb900; margin: 0;">Spacetap Case Study</h2>
-        </div>
-        
-        <div class="card-carousel" style="position: relative;">
-          <div class="carousel-slides" id="spacetap-slides" style="display: flex; overflow: hidden;">
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="Spacetap Project Image 1">
-            </div>
-            <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-              <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=250&q=80" style="width: 100%; height: 250px; object-fit: cover;" alt="Spacetap Project Image 2">
-            </div>
-          </div>
-          
-          <a class="carousel-prev" onclick="changeSlide('spacetap', -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10094;</a>
-          <a class="carousel-next" onclick="changeSlide('spacetap', 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px;">&#10095;</a>
-        </div>
-        
-        <div class="card-body" style="color: white; padding: 20px;">
-          <h3 style="color: #00ffff; margin-top: 0;">Space Technology Innovation Platform</h3>
-          <p>Built an advanced space technology platform for Spacetap that integrates satellite data processing, mission planning tools, and real-time space asset monitoring capabilities.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;">
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Challenge</h4>
-              <p style="margin: 0;">Complex satellite data processing and mission coordination requirements</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Solution</h4>
-              <p style="margin: 0;">Integrated platform with real-time processing and mission management tools</p>
-            </div>
-            
-            <div style="padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px;">
-              <h4 style="color: #fcb900; margin: 0 0 10px 0;">Results</h4>
-              <ul style="padding-left: 20px; margin: 0;">
-                <li>Real-time satellite monitoring</li>
-                <li>Automated mission planning</li>
-                <li>Enhanced space operations efficiency</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Ultra-specific styling ONLY for this exact hero section */
-  #homepage-hero-section #homepage-hero-flex {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 20px !important;
-    flex-wrap: nowrap !important;
-  }
   
-  /* Force side by side layout only for this specific section */
-  #homepage-hero-section #homepage-hero-text {
-    flex: 0 0 60% !important;
-  }
-  
-  #homepage-hero-section #homepage-hero-form {
-    flex: 0 0 40% !important;
-  }
-  
-  /* Video styling only for this specific hero section */
-  #homepage-hero-section #background-video {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    z-index: 1 !important;
-  }
-  
-  #homepage-hero-section {
-    position: relative !important;
-    overflow: hidden !important;
-  }
-  
-  #homepage-hero-section .container {
-    position: relative !important;
-    z-index: 5 !important;
-  }
-  
-  /* Button hover effect only for this hero section */
-  #homepage-hero-section #homepage-hero-form .cta-button:hover {
-    background: #05164d !important;
-    color: white !important;
-  }
-  
-  /* Form input focus states only for this hero section */
-  #homepage-hero-section #homepage-hero-form input:focus,
-  #homepage-hero-section #homepage-hero-form textarea:focus {
-    outline: none !important;
-    border-color: #05164d !important;
-    color: white;
-    box-shadow: 0 0 0 2px rgba(96, 183, 65, 0.2) !important;
-  }
-  
-  /* Case study cards hover effects */
-  .case-study-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 0 30px rgba(0,255,255,0.5) !important;
-  }
-  
-  /* Responsive adjustments ONLY for this hero section */
-  @media (max-width: 991px) {
+  <style>
+    /* Ultra-specific styling ONLY for this exact hero section */
     #homepage-hero-section #homepage-hero-flex {
-      flex-direction: column !important;
-      gap: 30px !important;
-    }
-    #homepage-hero-section #homepage-hero-text,
-    #homepage-hero-section #homepage-hero-form {
-      flex: 1 1 100% !important;
-      width: 100% !important;
-      padding-right: 0 !important;
-    }
-    
-    .case-studies-grid {
-      grid-template-columns: 1fr !important;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .case-studies-grid {
-      grid-template-columns: 1fr !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
       gap: 20px !important;
+      flex-wrap: nowrap !important;
     }
     
-    .case-study-card {
-      margin: 0 10px !important;
+    /* Force side by side layout only for this specific section */
+    #homepage-hero-section #homepage-hero-text {
+      flex: 0 0 60% !important;
     }
-  }
+    
+    #homepage-hero-section #homepage-hero-form {
+      flex: 0 0 40% !important;
+    }
+    
+    /* Video styling only for this specific hero section */
+    #homepage-hero-section #background-video {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      z-index: 1 !important;
+    }
+    
+    #homepage-hero-section {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    
+    #homepage-hero-section .container {
+      position: relative !important;
+      z-index: 5 !important;
+    }
+    
+    /* Button hover effect only for this hero section */
+    #homepage-hero-section #homepage-hero-form .cta-button:hover {
+      background: #05164d !important;
+      color: white !important;
+    }
+    
+    /* Form input focus states only for this hero section */
+    #homepage-hero-section #homepage-hero-form input:focus,
+    #homepage-hero-section #homepage-hero-form textarea:focus {
+      outline: none !important;
+      border-color: #05164d !important;
+      color: white;
+      box-shadow: 0 0 0 2px rgba(96, 183, 65, 0.2) !important;
+    }
+    
+    /* Responsive adjustments ONLY for this hero section */
+    @media (max-width: 991px) {
+      #homepage-hero-section #homepage-hero-flex {
+        flex-direction: column !important;
+        gap: 30px !important;
+      }
+      #homepage-hero-section #homepage-hero-text,
+      #homepage-hero-section #homepage-hero-form {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+      }
+    }
+  </style>
   
-  /* Smooth scroll behavior */
-  html {
-    scroll-behavior: smooth !important;
-  }
-</style>
+  <script>
+    // Form submission handler for API call
+    document.getElementById('heroContactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const data = {
+        fullName: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        description: formData.get('requirements')
+      };
+      
+      // Replace with your actual API endpoint
+      fetch('https://invertio-query.onrender.com/api/query', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        alert('Thank you! Your request has been submitted successfully.');
+        this.reset();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('Sorry, there was an error submitting your request. Please try again.');
+      });
+    });
+  </script>
+  
 
-<script>
-  // Form submission handler for API call
-  document.getElementById('heroContactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = {
-      fullName: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      description: formData.get('requirements')
-    };
-    
-    // Replace with your actual API endpoint
-    fetch('https://invertio-query.onrender.com/api/query', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-      alert('Thank you! Your request has been submitted successfully.');
-      this.reset();
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert('Sorry, there was an error submitting your request. Please try again.');
-    });
-  });
-  
-  // Scroll to card function
-  function scrollToCard(cardId) {
-    document.getElementById(cardId).scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
-    });
-    
-    // Add highlight effect
-    const card = document.getElementById(cardId);
-    card.style.transform = 'scale(1.02)';
-    card.style.boxShadow = '0 0 40px rgba(252, 185, 0, 0.6)';
-    
-    setTimeout(() => {
-      card.style.transform = '';
-      card.style.boxShadow = '0 0 20px rgba(0,255,255,0.3)';
-    }, 2000);
-  }
-  
-  // Carousel functionality
-  const carouselState = {};
-  
-  function changeSlide(cardPrefix, direction) {
-    if (!carouselState[cardPrefix]) {
-      carouselState[cardPrefix] = 0;
-    }
-    
-    const slides = document.querySelectorAll(`#${cardPrefix}-slides .slide`);
-    const totalSlides = slides.length;
-    
-    carouselState[cardPrefix] += direction;
-    
-    if (carouselState[cardPrefix] >= totalSlides) {
-      carouselState[cardPrefix] = 0;
-    } else if (carouselState[cardPrefix] < 0) {
-      carouselState[cardPrefix] = totalSlides - 1;
-    }
-    
-    const slideWidth = 100;
-    const translateValue = -carouselState[cardPrefix] * slideWidth;
-    
-    document.querySelector(`#${cardPrefix}-slides`).style.transform = `translateX(${translateValue}%)`;
-  }
-  
-  // Initialize carousels
-  const cardPrefixes = ['kpmg', 'samsa', 'studyfox', 'taxi', 'qatar', 'spacetap'];
-  cardPrefixes.forEach(prefix => {
-    carouselState[prefix] = 0;
-  });
-  
-  // Auto-play carousels
-  setInterval(() => {
-    cardPrefixes.forEach(prefix => {
-      changeSlide(prefix, 1);
-    });
-  }, 5000);
-</script>
+</section>
   <section class="award-section padding-t-50 padding-b-120 ">
     <div class="container">
       <div class="top-logo">
@@ -5540,8 +5138,6 @@ function consultCTA_cb(){
             <p>EXPERTS ON STAFF</p>
           </div>
         </div>
-
-
         <div class="subs-box">
           <ul>
             <li>
@@ -5570,8 +5166,6 @@ function consultCTA_cb(){
             </li>
           </ul>
         </div>
-
-
       </div>
       <div class="dis-flex footer-middle">
         <div class="flex-5">
