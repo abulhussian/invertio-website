@@ -1249,115 +1249,164 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     </div>
   </div>
 </header><section class="full-width-two-column">
-  <div class="row">
-    <div class="container">
-      <div class="headingsec">
-        <h1>Success stories</h1>
-      </div>
+  <div class="container" style="display: flex; flex-direction: column; gap: 40px;">
+
+  <!-- Reusable card style -->
+  <!-- Project Template -->
+  <style>
+    .project-card {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .project-image {
+      width: 50%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px 0 0 10px;
+      transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    }
+
+    .project-card.reverse .project-image {
+      border-radius: 0 10px 10px 0;
+    }
+
+    .project-image:hover {
+      transform: scale(1.05);
+      border-radius: 10px;
+    }
+
+    .project-content {
+      padding: 30px;
+      width: 50%;
+    }
+
+    .project-content h3 {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .project-content p:last-of-type {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-content a {
+      color: #fcb900;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Dark overlay for specific images */
+    .overlay {
+      position: relative;
+    }
+
+    .overlay::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+  </style>
+
+  <!-- Project 1 -->
+  <div class="project-card">
+    <div class="project-image" style="background-image: url('wp-content/uploads/2025/06/berd-thumb.png');"></div>
+    <div class="project-content">
+      <h3>QATAR MOEHE</h3>
+      <p>Ministry of Education Reward Portal.</p>
+      <p>Our team proudly developed the Ministry of Education Rewards Portal,
+a groundbreaking platform that encourages online learning among
+students and teachers. This bilingual admin portal and mobile app
+enable users to earn points for educational activities, fostering engagement and knowledge acquisition.</p>
+      <p><strong>Core tech:</strong> Angular, NODE.JS, PostgreSQL</p>
+      <a href="qatar-moehe/index.html">Learn More →</a>
     </div>
   </div>
-  <div class="row">
-    <div class="container">
-      <ul class="nav nav-tabs tab-item" role="tablist">
-        <li class="nav-item ">
-          <a class="nav-link active" href="javascript:void(0);" role="tab" data-target="#services" data-toggle="tabajax" 
-            data-id="8">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);" role="tab" data-target="#industries" data-toggle="tabajax" data-id="12">Industries</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);" role="tab" data-target="#technologies" data-toggle="tabajax" data-id="16">Technologies</a>
-        </li>
-      </ul>
+
+  <!-- Project 2 -->
+  <div class="project-card reverse">
+    <div class="project-image overlay" style="background-image: url('wp-content/uploads/2025/05/resume-thumb.webp');"></div>
+    <div class="project-content">
+      <h3>BaladiExpress Mart</h3>
+      <p>Modern retail brand delivering convenience and affordability in Qatar.</p>
+      <p>Our team successfully delivered the BaladiExpress Mart platform, a modern retail solution designed to enhance everyday shopping convenience in Qatar. This comprehensive system integrates a user-friendly web interface and mobile app that empower customers to browse, order, and manage their grocery needs effortlessly. With features like real-time inventory, location-based delivery, and digital promotions, the platform drives customer engagement and streamlines operational efficiency for retailers.</p>
+      <p><strong>Core tech:</strong> Angular, NODE.JS, Python</p>
+      <a href="baladiexpressmart/index.html">Learn More →</a>
     </div>
-    <!-- Tab panes -->
-    <input type="hidden" value="service" id="current_tag_selected"/>
-    <input type="hidden" value="8" id="already_post_count"/>
-    <div class="tab-content">
-      <div class="loading-overlay" style="display:none;">
-      </div>
-      <div role="tabpanel" class="tab-pane active" id="services">
-        <div class="services_button mt-2">
-          <div class="container">
-            <ul class="list-inline"><li class="taxonomy_filter list-inline-item mt-2" data-id="252"><span class="badge badge-pill badge-primary">Application Development</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="40"><span class="badge badge-pill badge-primary">IT Consulting &amp; Strategy</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="44"><span class="badge badge-pill badge-primary">Maintenance &amp; Support</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="248"><span class="badge badge-pill badge-primary">Migration &amp; Modernisation</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="250"><span class="badge badge-pill badge-primary">Mobile Application Development</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="11"><span class="badge badge-pill badge-primary">Mobile Development</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="10"><span class="badge badge-pill badge-primary">Product Engineering</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="48"><span class="badge badge-pill badge-primary">Software Development</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="9"><span class="badge badge-pill badge-primary">Team Extension</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="253"><span class="badge badge-pill badge-primary">Testing &amp; QA</span></li><li class="taxonomy_filter list-inline-item mt-2" data-id="251"><span class="badge badge-pill badge-primary">Website Development</span></li></ul>          </div>
-        </div>
-        <div class="dis-flex margin-t-100 in-container">
-          <div class="flex-row"><div class="flex-2 col-box block-id-1 small-image">
-<div class="dis-flex">
-<div class="flex-2">
-<div class="img-box lazy-background" style="background-image:url('wp-content/uploads/2025/06/berd-thumb.webp')">
-</div>
-</div>
-<div class="flex-2 bg-light-theme content-box">
-<h3>QATAR MOEHE</h3>
-<p>Ministry of Education Reward Portal.</p>
-<div class="dis-flex other-details">
-<div class="flex-2 clr-white">Core tech</div>
-<div class="flex-2">Angular, NODE.JS, Postgresql</div>
-</div>
-<a href="qatar-moehe/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
-</div>
-</div>
-</div><div class="flex-2 col-box block-id-2 full-image">
-<div class="img-box img2" style="background-image:url('wp-content/uploads/2025/05/resume-thumb.webp')">
+  </div>
 
-<div class="content-box">
-<h3>Resume Builder</h3>
-<p>AI-driven Resume Builder features smart recommendations, dynamic templates, and LinkedIn integration.</p>
-<div class="dis-flex other-details">
-<div class="flex-2 clr-white">Core tech</div>
-<div class="flex-2">Angular, NODE.JS, Python</div>
-</div>
-<a href="resume-builder/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
-</div>
-</div>
-</div></div><div class="flex-row"><div class="flex-2 col-box block-id-3 full-image">
-<div class="img-box img2" style="background-image:url('wp-content/uploads/2025/07/livestage-thumb.webp')">
+  <!-- Project 3 -->
+  <div class="project-card">
+    <div class="project-image" style="background-image: url('wp-content/uploads/2025/07/livestage-thumb.png');"></div>
+    <div class="project-content">
+      <h3>Single View</h3>
+      <p>Data intelligence platform with a 360° view for better decisions.</p>
+      <p>Our team developed connector to integrate various erp systems with
+their platform like Oracle NetSuite, Oracle Fusion, EBS, SAP. This
+helped high degree of flexibility, allowing its business to synchronize
+data and workflows based on automation and highlights were Improved
+Data Consistency, Streamlined Business Processes, Better Decision
+Making, Increased Efficiency</p>
+      <p><strong>Core tech:</strong> AWS, MongoDB, Node.js/Express, React Native</p>
+      <a href="single-view/index.html">Learn More →</a>
+    </div>
+  </div>
 
-<div class="content-box">
-<h3>Livestage</h3>
-<p>Live-streaming marketplace to host virtual events that deliver real-time performance experience to audience.</p>
-<div class="dis-flex other-details">
-<div class="flex-2 clr-white">Core tech</div>
-<div class="flex-2">AWS, MONGODB, Node JS, Node JS/Express, React Native</div>
+  <!-- Project 4 -->
+  <div class="project-card reverse">
+    <div class="project-image" style="background-image: url('wp-content/uploads/2025/07/teach-thumb.png');"></div>
+    <div class="project-content">
+      <h3>SMSA Express</h3>
+      <p>Logistics & supply chain company with strong Saudi infrastructure.</p>
+      <p>SMSA Express is a Saudi Arabian logistics and fulfillment company
+founded in 1994 in Riyadh. Our team developed a new generation
+billing system aiming to allow the B2B users of SMSA express to view
+their invoices and complete the payments. Key benefits achieved are
+product bundling and assembly, and real-time order tracking.
+</p>
+      <p><strong>Core tech:</strong> Flutter, Next.js, React</p>
+      <a href="smsa-express/index.html">Learn More →</a>
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <div class="project-card" style="margin-bottom: 50px;">
+    <div class="project-image" style="background-image: url('wp-content/uploads/2025/06/travel-thumb.png');"></div>
+    <div class="project-content">
+      <h3>AI Pilot</h3>
+      <p>Global travel & expense platform tailored for Bonhams.</p>
+      <p>AI-powered anthropometric model with 98–99% accurate
+height estimation, BLE-enabled height measurement, and
+instant BMI calculation, integrated into a real-time child
+health monitoring system. Enables personalized nutrition
+plans and has been implemented pilot with the UP
+Government (Anganwadis).</p>
+      
+      <p><strong>Core tech:</strong> Flutter, Node.js, React</p>
+      <a href="ai-pilot/index.html">Learn More →</a>
+    </div>
+  </div>
+
 </div>
-<a href="livestage/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
-</div>
-</div>
-</div><div class="flex-2 col-box block-id-4 small-image">
-<div class="dis-flex">
-<div class="flex-2">
-<div class="img-box lazy-background" style="background-image:url('wp-content/uploads/2025/07/teach-thumb.webp')">
-</div>
-</div>
-<div class="flex-2 bg-light-theme content-box">
-<h3>Teachers App</h3>
-<p>Inclusive, scalable digital learning with a multilingual, lightweight app.</p>
-<div class="dis-flex other-details">
-<div class="flex-2 clr-white">Core tech</div>
-<div class="flex-2">Flutter, Next JS, React</div>
-</div>
-<a href="teachers-app/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
-</div>
-</div>
-</div></div><div class="flex-row"><div class="flex-2 col-box block-id-5 small-image">
-<div class="dis-flex">
-<div class="flex-2">
-<div class="img-box lazy-background" style="background-image:url('wp-content/uploads/2025/06/travel-thumb.webp')">
-</div>
-</div>
-<div class="flex-2 bg-light-theme content-box">
-<h3>Bonhams Travel App</h3>
-<p>Streamlined global travel bookings and expense workflows for Bonhams.</p>
-<div class="dis-flex other-details">
-<div class="flex-2 clr-white">Core tech</div>
-<div class="flex-2">Flutter, Node JS, React</div>
-</div>
-<a href="bonhams-travel-app/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
-</div>
-</div>
-</div><div class="flex-2 col-box block-id-6 full-image">
+
+<!-- </div><div class="flex-2 col-box block-id-6 full-image">
 <div class="img-box img2" style="background-image:url('wp-content/uploads/2025/05/resolute-thumb.webp')">
 
 <div class="content-box">
@@ -1383,8 +1432,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
 <a href="kia-ndp-panel/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
 </div>
 </div>
-</div><div class="flex-2 col-box block-id-8 small-image">
-<div class="dis-flex">
+</div><div class="flex-2 col-box block-id-8 small-image"> -->
+<!-- <div class="dis-flex">
 <div class="flex-2">
 <div class="img-box lazy-background" style="background-image:url('wp-content/uploads/2023/12/480_463.jpg')">
 </div>
@@ -1398,7 +1447,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
 </div>
 <a href="smart-business-solution-provider/index.html" class="learn-more margin-t-50">Learn More <i class="round-arrow-icon"></i></a>
 </div>
-</div>
+</div> -->
 </div></div><div class="flex-row"></div>        </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="industries"></div>
@@ -1407,7 +1456,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
   </div>
 </section>
 <section>
-  <div class="custom">
+  <!-- <div class="">
             <div class="row load-posts">
                <div class="nopost"></div>
                <div class="lode_mor_btn hidepost">
@@ -1426,30 +1475,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
                   </div>
                </div>
             </div>
-         </div>
+         </div> -->
 </section>
-<footer class="footer">
+<footer class="footer" style="">
   <div class="container">
     <div class="dis-flex footer-top">
-      <div class="count-sec">
-        <div class="count-col">
-          <h5>$5B+</h5>
-          <p>BUSINESS VALUE CREATED</p>
-        </div>
-        <div class="count-col">
-          <h5>99.9%</h5>
-          <p>SERVER UPTIME FOR MANAGED IT</p>
-        </div>
-        <div class="count-col">
-          <h5>1,000,000+</h5>
-          <p>HOURS OF DEVELOPMENT EXPERTISE</p>
-        </div>
-        <div class="count-col">
-          <h5>675+</h5>
-          <p>EXPERTS ON STAFF</p>
-        </div>
-      </div>
-      <div class="subs-box">
+        
+      <!-- <div class="subs-box">
         <ul>
           <li>
             <picture>
@@ -1472,7 +1504,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
             </picture>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="dis-flex footer-middle">
       <div class="flex-5">
@@ -1529,7 +1561,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     <div class="flex-4 logo-box">
         <h3>PROUDLY BROUGHT TO YOU BY Invertio Solutions</h3>
         <div class="dis-flex">
-          <a href="https://www.invoicera.com/">
+          <!-- <a href="https://www.invoicera.com/">
             <picture>
               <img loading="lazy" src="wp-content/themes/casestudies-v2/assets/images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
@@ -1538,7 +1570,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
             <picture>
             <img loading="lazy" src="wp-content/themes/casestudies-v2/assets/images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
           </picture>
-          </a>
+          </a> -->
         </div>
       </div>
       <div class="flex-4 social-box">
@@ -1572,10 +1604,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
         </div>
       </div>
       <div class="flex-4 copyright">
-        <a href="http://www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" target="_blank" 
+        <!-- <a href="http://www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" target="_blank" 
         title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px; display:block" class="dmca-badge">
         <img src ="../../images.dmca.com/Badges/dmca-badge-w200-5x1-06cbc9.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"  alt="DMCA.com Protection Status" /></a>  <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="footer-copyright">
