@@ -5377,385 +5377,422 @@ body.page-template-template-testimonials .client-video-section iframe,
         margin: 0 auto
     }
 }
-
 .success-slider-section {
-    overflow: hidden;
-    background: linear-gradient(90deg, #05164d 0%, #0c33b3 100%)
+  overflow: hidden;
+  background: #D3D3D3; /* light gray background */
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* soft shadow */
 }
 
-.success-slider-section .top-section h2 {
-    color: #fff
-}
-
+.success-slider-section .top-section h2,
 .success-slider-section .top-section p {
-    color: #bdb7b7
+  color: #05164d; /* dark blue text */
 }
 
 .success-slider-section .success-slider {
-    position: relative;
-    width: 100%
+  position: relative;
+  width: 100%;
 }
 
 .success-slider-section .success-slider .glider {
-    display: flex;
-    width: 100%;
-    overflow: hidden
+  display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 
 .success-slider-section .success-slider .glider-slide {
-    flex: 0 0 67%;
-    transition: all 0.3s ease
+  flex: 0 0 67%;
+  transition: all 0.3s ease;
 }
 
 .success-slider-section .success-slider .glider-slide:nth-child(2n) {
-    flex: 0 0 30%;
-    opacity: 1
+  flex: 0 0 30%;
+  opacity: 1;
 }
 
 .success-slider-section .success-slider .industry-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 0 10px;
-    width: 100% !important
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px;
+  width: 100% !important;
+  background: #f9f9f9;
+  padding: 15px; /* light padding inside card */
+  box-shadow: inset 0 4px 15px rgba(5, 22, 77, 0.15); /* gentle inner shadow */
 }
 
 .success-slider-section .success-slider .industry-card .card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 423px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: top 0.6s ease-in-out;
-    z-index: 1;
-    border-radius: 10px
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 423px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: top 0.6s ease-in-out;
+  z-index: 1;
+  border-radius: 10px;
+  filter: brightness(0.9);
 }
 
 .success-slider-section .success-slider .industry-card .card-bg .category {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background: rgba(255, 255, 255, .1);
-    line-height: initial;
-    color: #fff;
-    padding: 4px 10px;
-    font-weight: 500;
-    border-radius: 5px;
-    font-size: 12px;
-    text-transform: uppercase
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(5, 22, 77, 0.1);
+  line-height: initial;
+  color: #fff; /* white text for category */
+  padding: 4px 10px;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .success-slider-section .success-slider .industry-card .card-bg .move {
-    width: 31px;
-    height: 36px;
-    border: 2px solid #fff;
-    border-radius: 14px;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    transition: all 0.3s ease-in-out
+  width: 31px;
+  height: 36px;
+  border: 2px solid #fff; /* white border */
+  border-radius: 14px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .success-slider-section .success-slider .industry-card .card-bg .move:after {
-    content: "";
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/move.svg) no-repeat;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    top: 10px;
-    background-size: 100%;
-    width: 10px;
-    height: 10px;
-    transform: rotate(-8deg);
-    transition: all 0.3s ease-in-out
+  content: "";
+  background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/move.svg) no-repeat;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  top: 10px;
+  background-size: 100%;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-8deg);
+  transition: all 0.3s ease-in-out;
+  filter: invert(100%); /* make icon white */
 }
 
 .success-slider-section .success-slider .industry-card .card-bg .move:hover {
-    width: 31px;
-    height: 31px;
-    border-radius: 14px
+  width: 31px;
+  height: 31px;
+  border-color: #fff;
 }
 
 .success-slider-section .success-slider .industry-card .card-bg .move:hover:after {
-    transform: rotate(0deg);
-    top: 8px
+  transform: rotate(0deg);
+  top: 8px;
 }
 
+/* Card content text colors changed to white */
 .success-slider-section .success-slider .industry-card .card-content {
-    position: relative;
-    z-index: 2;
-    padding: 30px;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: #fff;
-    z-index: 2
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff; /* white text */
+  border-radius: 0 0 10px 10px;
+  transition: background 0.3s ease;
+  background: transparent;
 }
 
 .success-slider-section .success-slider .industry-card .card-content h5 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 400
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff; /* white text */
 }
 
 .success-slider-section .success-slider .industry-card .card-content h4 {
-    font-size: 24px;
-    color: #fff;
-    margin: 0 0 15px
+  font-size: 24px;
+  color: black; /* white text */
+  margin: 0 0 15px;
 }
 
 .success-slider-section .success-slider .industry-card .card-content h4 a {
-    color: #fff
+  color: #fff; /* white link */
+  text-decoration: none;
 }
 
 .success-slider-section .success-slider .industry-card .card-content h4 a:hover {
-    text-decoration: underline
+  text-decoration: underline;
 }
 
 .success-slider-section .success-slider .industry-card .card-content p {
-    color: #e0e0e0;
-    font-weight: 400
+  color: black; /* soft white text */
+  font-weight: 400;
 }
 
 .success-slider-section .success-slider .industry-card .card-content .expand {
-    text-align: right;
-    font-size: 18px;
-    color: #fff;
-    text-decoration: underline;
-    right: 0;
-    margin: 50px 0 0;
-    position: absolute;
-    text-decoration: underline
+  text-align: right;
+  font-size: 18px;
+  color: #fff; /* white text */
+  text-decoration: underline;
+  margin: 50px 0 0;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .success-slider-section .success-slider .industry-card .card-content .expand:after {
-    content: "";
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/white-arrow.svg) no-repeat center;
-    width: 11px;
-    display: inline-block;
-    height: 11px;
-    margin-left: 8px;
-    vertical-align: middle;
-    background-size: 100%;
-    transition: all 0.3s ease-in-out
+  content: "";
+  background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/white-arrow.svg) no-repeat center;
+  width: 11px;
+  display: inline-block;
+  height: 11px;
+  margin-left: 8px;
+  vertical-align: middle;
+  background-size: 100%;
+  transition: margin-left 0.3s ease-in-out;
 }
 
 .success-slider-section .success-slider .industry-card .card-content .expand:hover:after {
-    margin-left: 15px
+  margin-left: 15px;
 }
 
 .success-slider-section .success-slider .industry-card:nth-child(2n) .card-bg {
-    position: relative;
-    height: 294px
+  position: relative;
+  height: 294px;
+  filter: brightness(0.95);
 }
 
 .success-slider-section .success-slider .industry-card:nth-child(2n) .card-content {
-    margin: 25px 0 0;
-    padding: 0;
-    width: 70%;
-    height: initial
+  margin: 25px 0 0;
+  padding: 0;
+  width: 70%;
+  height: initial;
+  background: transparent;
+  box-shadow: none;
+  color: #fff; /* white text */
 }
 
 .success-slider-section .success-slider .industry-card:nth-child(2n) .card-content p {
-    color: #fff
+  color: black; /* white paragraph text */
 }
 
 .success-slider-section .success-slider .test-button {
-    position: absolute;
-    bottom: 55px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    right: 0
+  position: absolute;
+  bottom: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .success-slider-section .success-slider .test-button .glider-dots {
-    align-items: center
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 
 .success-slider-section .success-slider .test-button .glider-dots .glider-dot {
-    display: inline-block;
-    background: #05164d;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 2px;
-    display: none
+  display: inline-block;
+  background: #fff; /* white dots */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 2px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 .success-slider-section .success-slider .test-button .glider-dots .glider-dot.active {
-    background: #05164d;
-    width: 16px;
-    height: 16px
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  opacity: 1;
 }
 
 .success-slider-section .success-slider .test-button .test-prev,
 .success-slider-section .success-slider .test-button .test-next {
-    background-color: transparent;
-    border: 2px solid #ffffff80;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 16px;
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/white-arrowsd.svg) no-repeat center;
-    width: 36px;
-    height: 36px;
-    top: auto;
-    font-size: 0;
-    right: 43px;
-    opacity: 1;
-    left: auto;
-    transform: rotate(0);
-    font-size: 0;
-    position: absolute
+  background-color: transparent;
+  border: 2px solid #05164d;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 16px;
+  background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/blue-arrow.svg) no-repeat center;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: auto;
+  font-size: 0;
+  right: 43px;
+  opacity: 1;
+  left: auto;
+  transition: all 0.3s ease;
+  filter: invert(0);
 }
 
 .success-slider-section .success-slider .test-button .test-prev:hover,
 .success-slider-section .success-slider .test-button .test-next:hover {
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/blue-arrow.svg) no-repeat center;
-    background-color: #fff;
-    border-color: #fff
+  background-color: #05164d;
+  border-color: #05164d;
+  background-image: url(../../../../../../../../themes/invertio/v6.0/images/home-images/white-arrowsd.svg);
+  filter: invert(1);
 }
 
 .success-slider-section .success-slider .test-button .test-prev.test-next,
 .success-slider-section .success-slider .test-button .test-next.test-next {
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/white-arrowsd.svg) no-repeat center;
-    right: 0;
-    transform: rotate(180deg)
+  background-image: url(../../../../../../../../themes/invertio/v6.0/images/home-images/blue-arrow.svg);
+  right: 0;
+  transform: rotate(180deg);
+  filter: invert(0);
 }
 
 .success-slider-section .success-slider .test-button .test-prev.test-next:hover,
 .success-slider-section .success-slider .test-button .test-next.test-next:hover {
-    background: url(../../../../../../../../themes/invertio/v6.0/images/home-images/blue-arrow.svg) no-repeat center;
-    background-color: #fff
+  background-color: #05164d;
+  background-image: url(../../../../../../../../themes/invertio/v6.0/images/home-images/white-arrowsd.svg);
+  border-color: #05164d;
+  filter: invert(1);
 }
 
 .glider-slide {
-    opacity: 1 !important
+  opacity: 1 !important;
 }
 
 .card-content {
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
+/* Responsive adjustments */
 @media (max-width:1024px) {
-    .success-slider-section .success-slider .glider-slide {
-        flex: 0 0 100%;
-        flex: 100%;
-        width: 100%
-    }
+  .success-slider-section .success-slider .glider-slide,
+  .success-slider-section .success-slider .glider-slide:nth-child(2n) {
+    flex: 0 0 100%;
+    width: 100%;
+  }
 
-    .success-slider-section .success-slider .glider-slide:nth-child(2n) {
-        flex: 0 0 100%;
-        flex: 100%;
-        width: 100%
-    }
+  .success-slider-section .success-slider .industry-card {
+    flex: 0 0 100%;
+    width: 100vw !important;
+    max-width: 100vw;
+    margin: 0 5px;
+    padding: 15px;
+    box-shadow: inset 0 4px 15px rgba(5, 22, 77, 0.15);
+  }
 
-    .success-slider-section .success-slider .industry-card {
-        flex: 0 0 100%;
-        flex: 100%;
-        width: 100vw !important;
-        max-width: 100vw;
-        margin: 0 5px
-    }
+  .success-slider-section .success-slider .industry-card .card-bg {
+    height: 400px;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-bg {
-        height: 400px
-    }
+  .success-slider-section .success-slider .industry-card .card-bg .category {
+    top: 20px;
+    left: 20px;
+    color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-bg .category {
-        top: 20px;
-        left: 20px
-    }
+  .success-slider-section .success-slider .industry-card .card-bg .move {
+    bottom: 40px;
+    border-color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-bg .move {
-        bottom: 40px
-    }
+  .success-slider-section .success-slider .industry-card .card-content {
+    padding: 20px;
+    width: 90%;
+    background: transparent;
+    color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-content {
-        padding: 20px;
-        width: 90%
-    }
+  .success-slider-section .success-slider .industry-card .card-content h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-content h5 {
-        font-size: 16px;
-        margin-bottom: 15px
-    }
+  .success-slider-section .success-slider .industry-card .card-content h4 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 10px;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-content h4 {
-        font-size: 20px;
-        line-height: 30px;
-        margin: 0 0 10px
-    }
+  .success-slider-section .success-slider .industry-card:nth-child(2n) .card-content {
+    margin: 15px 0 0;
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card:nth-child(2n) .card-content {
-        margin: 15px 0 0;
-        padding: 0;
-        width: 100%
-    }
-
-    .success-slider-section .success-slider .test-button {
-        margin: 20px 0 0;
-        position: static;
-        padding: 0 0 30px
-    }
+  .success-slider-section .success-slider .test-button {
+    margin: 20px 0 0;
+    position: static;
+    padding: 0 0 30px;
+  }
 }
 
 @media (max-width:767px) {
-    .success-slider-section .success-slider .industry-card {
-        flex: 0 0 100%;
-        flex: 100%;
-        width: 100vw !important;
-        max-width: 100vw
-    }
+  .success-slider-section .success-slider .industry-card {
+    flex: 0 0 100%;
+    width: 100vw !important;
+    max-width: 100vw;
+    padding: 15px;
+    box-shadow: inset 0 4px 15px rgba(5, 22, 77, 0.15);
+  }
 
-    .success-slider-section .success-slider .industry-card .card-bg {
-        height: 400px
-    }
+  .success-slider-section .success-slider .industry-card .card-bg {
+    height: 400px;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-bg .category {
-        top: 20px;
-        left: 20px
-    }
+  .success-slider-section .success-slider .industry-card .card-bg .category {
+    top: 20px;
+    left: 20px;
+    color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-bg .move {
-        bottom: 40px;
-        right: 15px
-    }
+  .success-slider-section .success-slider .industry-card .card-bg .move {
+    bottom: 40px;
+    right: 15px;
+    border-color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-content {
-        padding: 20px;
-        width: 90%
-    }
+  .success-slider-section .success-slider .industry-card .card-content {
+    padding: 20px;
+    width: 90%;
+    background: transparent;
+    color: #fff;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-content h5 {
-        font-size: 16px;
-        margin-bottom: 15px
-    }
+  .success-slider-section .success-slider .industry-card .card-content h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 
-    .success-slider-section .success-slider .industry-card .card-content h4 {
-        font-size: 20px;
-        line-height: 30px;
-        margin: 0 0 10px
-    }
+  .success-slider-section .success-slider .industry-card .card-content h4 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 10px;
+  }
 
-    .success-slider-section .success-slider .industry-card:nth-child(2n) .card-content {
-        margin: 15px 0 0;
-        padding: 0;
-        width: 100%
-    }
+  .success-slider-section .success-slider .industry-card:nth-child(2n) .card-content {
+    margin: 15px 0 0;
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+  }
 
-    .success-slider-section .success-slider .test-button {
-        margin: 20px 0 0;
-        position: static;
-        padding: 0 0 30px
-    }
+  .success-slider-section .success-slider .test-button {
+    margin: 20px 0 0;
+    position: static;
+    padding: 0 0 30px;
+  }
 }
 
 .latest-insight .top-section.b-100 {
@@ -8760,7 +8797,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 }
 
 .hero-section .dis-flex .left-box h1 {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 1.5;
     color: #fff
 }
@@ -8833,8 +8870,8 @@ body.page-template-template-testimonials .client-video-section iframe,
     justify-content: center;
     z-index: 1;
     position: absolute;
-    bottom: 80px;
-    right: 100px
+    bottom: 45px;
+    right: 0px
 }
 
 .hero-section .scroll-next .scroll-downicon {
