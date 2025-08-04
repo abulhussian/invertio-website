@@ -1999,57 +1999,197 @@ development and software engineering teams to our clients globally.</p>
             </a>
           </div>
         </div>
+        <style>.right-box-form {
+  width: 30%;
+  background: #ffffff;
+  z-index: 10;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  min-width: 330px;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+.hero-form-header {
+  padding: 24px 20px 16px;
+  background-color: #fcb900;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-form-header h3 {
+  font-size: 25px;
+  color: #05164d;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.hero-form-fields {
+  padding: 30px 25px 20px;
+}
+
+.hero-form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.form-field {
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+.form-field:last-child {
+  margin-bottom: 22px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1.5px solid #ececec;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #f7f8fa;
+  transition: border 0.3s, box-shadow 0.3s;
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border: 1.5px solid #fcb900;
+  box-shadow: 0 1px 5px rgba(252, 185, 0, 0.12);
+  background: #fffde6;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-size: 15.5px;
+}
+
+.cta-button-1 {
+  background: #fcb900;
+  color: #05164d;
+  border: none;
+  padding: 13px 0;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  width: 60%;
+  transition: background 0.25s, transform 0.22s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(252,185,0,0.09);
+}
+
+.cta-button-1:hover, .cta-button-1:focus {
+  background: #ffce36;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 16px rgba(252,185,0,0.19);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0;
+}
+
+/* Scroll Next Styling */
+.scroll-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto 16px;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+}
+
+.scroll-downicon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.scroll-down-text {
+  color: #05164d;
+  font-size: 14px;
+  margin-top: 2px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .right-box-form {
+    width: 98%;
+    min-width: unset;
+    max-width: unset;
+    margin: 15px auto;
+    border-radius: 20px;
+  }
+  .hero-form-fields {
+    padding: 20px 8px 12px;
+  }
+  .hero-form-header {
+    padding: 16px 8px 8px;
+  }
+}
+</style>
          <!-- Contact Form on Right Side -->
-          <div class="right-box-form" id="homepage-hero-form"
-            style="width: 30%; background: #ffffff; z-index: 10; border-radius: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); position: relative; z-index: 10; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden;">
+          <div class="right-box-form" id="homepage-hero-form">
+  <!-- Header -->
+  <div class="hero-form-header">
+    <h3>Get a Free Consultation</h3>
+  </div>
+  <!-- Form -->
+  <form id="heroContactForm" class="hero-form-fields">
+    <!-- Name & Email -->
+    <div class="hero-form-row">
+      <div class="form-field">
+        <input type="text" name="name" placeholder="Name" required>
+      </div>
+      <div class="form-field">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+    </div>
+    <!-- Phone -->
+    <div class="form-field">
+      <input type="tel" name="phone" placeholder="Phone">
+    </div>
+    <!-- Requirements -->
+    <div class="form-field">
+      <textarea name="requirements" placeholder="Project Requirements" rows="4"></textarea>
+    </div>
+    <!-- Submit Button -->
+    <div class="form-actions">
+      <button type="submit" class="cta-button-1">Submit Request</button>
+    </div>
+  </form>
+  
+</div>
+<a class="scroll-next" href="#serv">
+    <span class="scroll-downicon">
+      <!-- Professional scroll down SVG icon -->
+      <svg width="26" height="26" fill="#05164d" viewBox="0 0 26 26" style="display:block; margin:0 auto;">
+      </svg>
+    </span>
+  </a>
 
-            <!-- Header -->
-            <div
-              style="padding: 25px 20px; background-color: #fcb900; border-top-left-radius: 25px; border-top-right-radius: 25px; display: flex; justify-content: center; align-items: center;">
-              <h3 style="font-size: 24px; color: #05164d; margin: 0;">Get a Free Consultation</h3>
-            </div>
-
-            <!-- Form -->
-            <form id="heroContactForm" style="padding: 25px;">
-
-              <!-- Row for Name & Email -->
-              <div style="display: flex; gap: 10px; margin-bottom: 18px;">
-                <!-- Name -->
-                <div style="flex: 1;">
-                  <input type="text" name="name" placeholder="Name" required
-                    style="width: 100%; padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; transition: border 0.3s ease, box-shadow 0.3s ease;">
-                </div>
-
-                <!-- Email -->
-                <div style="flex: 1;">
-                  <input type="email" name="email" placeholder="Email" required
-                    style="width: 100%; padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; transition: border 0.3s ease, box-shadow 0.3s ease;">
-                </div>
-              </div>
-
-              <!-- Phone Field -->
-              <div class="form-group" style="margin-bottom: 18px;">
-                <input type="tel" name="phone" placeholder="Phone"
-                  style="width: 100%; padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; transition: border 0.3s ease, box-shadow 0.3s ease;">
-              </div>
-
-              <!-- Requirements Field -->
-              <div class="form-group" style="margin-bottom: 22px;">
-                <textarea name="requirements" placeholder="Project Requirements" rows="4"
-                  style="width: 100%; padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; resize: vertical; transition: border 0.3s ease, box-shadow 0.3s ease;"></textarea>
-              </div>
-
-              <!-- Submit Button -->
-              <div style="display: flex; justify-content: start; align-items: start;">
-                <button type="submit" class="cta-button"
-                  style="background: #fcb900; color: #05164d; border: none; padding: 14px 28px; border-radius: 50px; cursor: pointer; font-size: 16px; font-weight: 600; width: 50%; transition: background-color 0.3s ease;">
-                  Submit Request
-                </button>
-              </div>
-            </form>
-                   <a class="scroll-next" href="#serv"><span class="scroll-downicon">scroll down</span></a>
-
-          </div>
 
 
         <style>
@@ -2093,7 +2233,7 @@ development and software engineering teams to our clients globally.</p>
           }
 
           /* Button hover effect only for this hero section */
-          #homepage-hero-section #homepage-hero-form .cta-button:hover {
+          #homepage-hero-section #homepage-hero-form .cta-button-1:hover {
             background: #05164d !important;
             color: white !important;
           }
@@ -2230,7 +2370,7 @@ development and software engineering teams to our clients globally.</p>
         <div class="tabs-container">
           <div class="top-section">
             <h2>We Work With</h2>
-            <p>Startups, enterprises, and agencies to add more value to their tech portfolio and improve the bottom line
+            <p>Startups, enterprises, and agencies to add more value to their tech portfolo and improve the bottom line
               with custom software engineering and IT solutions.</p>
           </div>
           <ul class="tabs">
@@ -2252,37 +2392,37 @@ development and software engineering teams to our clients globally.</p>
           </ul>
           <div class="tab-content">
             <div class="content active" id="welm-1">
-              <h3><a href="startup-product-development.html">Startups</a></h3>
+              <h3><a href="software-development-services-company.html">Startups</a></h3>
               <p>We help startups accelerate their growth with agile IT and digital transformation strategies.</p>
               <ul>
-                <li><a href="discovery-phase-process.html">Product Discovery</a></li>
-                <li><a href="mvp-app-development-company.html">MVP Development</a></li>
-                <li><a href="outsource-software-product-development-services.html">Product Development</a></li>
-                <li><a href="cto-as-a-service.html">CTO as a Service</a></li>
+                <li><a href="software-development-services-company.html">Product Discovery</a></li>
+                <li><a href="software-development-services-company.html">MVP Development</a></li>
+                <li><a href="software-development-services-company.html">Product Development</a></li>
+                <li><a href="software-development-services-company.html">CTO as a Service</a></li>
               </ul>
-              <a href="startup-product-development.html" class="is-arrow">Get Details</a>
+              <a href="software-development-services-company.html" class="is-arrow">Get Details</a>
             </div>
             <div class="content " id="welm-2">
-              <h3><a href="enterprise-software-development-services.html">Enterprises</a></h3>
+              <h3><a href="software-development-services-company.html">Enterprises</a></h3>
               <p>We build scalable IT &amp; digital solutions to enable enterprises optimize operations and grow.</p>
               <ul>
-                <li><a href="application-development.html">App Development</a></li>
-                <li><a href="software-quality-assurance-testing-services.html">QA &amp; Testing</a></li>
-                <li><a href="outsource-software-product-development-services.html">Product Engineering</a></li>
-                <li><a href="digital-transformation-services.html">Digital Transformation</a></li>
+                <li><a href="software-development-services-company.html">App Development</a></li>
+                <li><a href="software-development-services-company.html">QA &amp; Testing</a></li>
+                <li><a href="software-development-services-company.html">Product Engineering</a></li>
+                <li><a href="software-development-services-company.html">Digital Transformation</a></li>
               </ul>
-              <a href="enterprise-software-development-services.html" class="is-arrow">Get Details</a>
+              <a href="software-development-services-company.html" class="is-arrow">Get Details</a>
             </div>
             <div class="content " id="welm-3">
-              <h3><a href="agencies-software-development-services.html">Agencies</a></h3>
+              <h3><a href="software-development-services-company.html">Agencies</a></h3>
               <p>We partner with agencies to help them deliver innovative IT solutions and get a competitive edge.</p>
               <ul>
-                <li><a href="white-label-services.html">While Label Solutions</a></li>
-                <li><a href="outsource-software-product-development-services.html">Product Engineering</a></li>
-                <li><a href="digital-transformation-services.html">Digital Transformation</a></li>
-                <li><a href="it-staff-augmentation-services.html">Staff Augmentation</a></li>
+                <li><a href="software-development-services-company.html">While Label Solutions</a></li>
+                <li><a href="software-development-services-company.html">Product Engineering</a></li>
+                <li><a href="software-development-services-company.html">Digital Transformation</a></li>
+                <li><a href="software-development-services-company.html">Staff Augmentation</a></li>
               </ul>
-              <a href="agencies-software-development-services.html" class="is-arrow">Get Details</a>
+              <a href="software-development-services-company.html" class="is-arrow">Get Details</a>
             </div>
           </div>
         </div>
