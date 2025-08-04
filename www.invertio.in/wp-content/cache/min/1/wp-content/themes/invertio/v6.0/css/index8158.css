@@ -6413,7 +6413,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 .header-two .header-item-right {
     flex-basis: 80%;
     display: flex;
-    justify-content:space-between;
+    justify-content:right;
     align-items: center;
     gap: 70px;
 }
