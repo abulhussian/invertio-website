@@ -129,6 +129,9 @@ a.ws-dotted:hover{text-decoration: none !important; color: #656565;}
 <link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/7522" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
 <meta name="generator" content="WordPress 6.7.2" />
 <link rel='shortlink' href='index40da.html?p=7522' />
+<link data-minify="1" rel='preload stylesheet' as='style' onload="this.onload=null;this.rel='stylesheet'"
+    id='vc-index-css' href='wp-content/cache/min/1/wp-content/themes/invertio/v6.0/css/about.css'
+    media='all' />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="wp-json/oembed/1.0/embed486f?url=https%3A%2F%2Fwww.invertio.in%2Fabout" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="wp-json/oembed/1.0/embed6db9?url=https%3A%2F%2Fwww.invertio.in%2Fabout&amp;format=xml" />
 <link rel="preload" as="image" href="wp-content/themes/invertio/v3.0/images/home-partner-logo.svg" />
@@ -901,10 +904,10 @@ style="display:none;visibility:hidden"></iframe></noscript>
               <a class="mst-link" href="about.html">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu company-menu">
                 <a href="about.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-01.svg" class="menuicon" alt="menuicon">Overview</a>
-                <a href="in-media.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a>
-                <a href="testimonials.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-03.svg" class="menuicon" alt="menuicon">Clients & Testimonials</a>
-                <a href="careers.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-04.svg" class="menuicon" alt="menuicon">Careers</a>
-                <a href="blog/index.html" target="_blank"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-05.svg" class="menuicon" alt="menuicon">Blog</a>
+                <!-- <a href="in-media.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a> -->
+                <!-- <a href="testimonials.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-03.svg" class="menuicon" alt="menuicon">Clients & Testimonials</a> -->
+                <!-- <a href="careers.html"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-04.svg" class="menuicon" alt="menuicon">Careers</a> -->
+                <!-- <a href="blog/index.html" target="_blank"><img loading="lazy" src="wp-content/themes/invertio/v4.0/header-images/comp-05.svg" class="menuicon" alt="menuicon">Blog</a> -->
               </div>
             </li>
                         <!-- Hire Menu Starts -->
@@ -1448,26 +1451,72 @@ style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-  <!-- Services Snapshot -->
-  <section style="padding: 80px 20px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="text-align: center; font-size: 36px; color: #1e1e1e; margin-bottom: 50px;">What We Do</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
-        <div style="flex: 1 1 30%; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-          <img src="../www.invertio.in/wp-content/themes/invertio/dev-img/hourly-about.jpg" alt="Hourly Model" style="width: 100%; border-radius: 10px;" />
-          <h3 style="margin-top: 20px; color: #333;">Hourly Development Model</h3>
-          <p style="color: #666;">Scale fast with flexible remote development teams skilled in product design, engineering, and deployment.</p>
+   <section class="tabs-section padding-t-120 padding-b-120" id="tabs-section-1">
+    <div class="container">
+      <div class="tab-flex">
+        <div class="tabs-container">
+          <div class="top-section">
+            <h2>We Work With</h2>
+            <p>Startups, enterprises, and agencies to add more value to their tech portfolio and improve the bottom line
+              with custom software engineering and IT solutions.</p>
+          </div>
+          <ul class="tabs">
+            <li class="tab active" data-target="welm-1">
+              <img src="wp-content/themes/invertio/v6.0/images/home-images/tabicon01.svg" class="normal" alt="invertio">
+              <img src="wp-content/themes/invertio/v6.0/images/home-images/iconhov01.svg" class="hover" alt="invertio">
+              Startups
+            </li>
+            <li class="tab " data-target="welm-2">
+              <img src="wp-content/themes/invertio/v6.0/images/home-images/tabicon02.svg" class="normal" alt="invertio">
+              <img src="wp-content/themes/invertio/v6.0/images/home-images/iconhov02.svg" class="hover" alt="invertio">
+              Enterprises
+            </li>
+            <li class="tab " data-target="welm-3">
+              <img src="wp-content/themes/invertio/v6.0/images/home-images/tabicon03.svg" class="normal" alt="invertio">
+              <img src="wp-content/themes/invertio/v6.0/images/home-images/iconhov03.svg" class="hover" alt="invertio">
+              Agencies
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="content active" id="welm-1">
+              <h3><a href="startup-product-development.html">Startups</a></h3>
+              <p>We help startups accelerate their growth with agile IT and digital transformation strategies.</p>
+              <ul>
+                <li><a href="discovery-phase-process.html">Product Discovery</a></li>
+                <li><a href="mvp-app-development-company.html">MVP Development</a></li>
+                <li><a href="outsource-software-product-development-services.html">Product Development</a></li>
+                <li><a href="cto-as-a-service.html">CTO as a Service</a></li>
+              </ul>
+              <a href="startup-product-development.html" class="is-arrow">Get Details</a>
+            </div>
+            <div class="content " id="welm-2">
+              <h3><a href="enterprise-software-development-services.html">Enterprises</a></h3>
+              <p>We build scalable IT &amp; digital solutions to enable enterprises optimize operations and grow.</p>
+              <ul>
+                <li><a href="application-development.html">App Development</a></li>
+                <li><a href="software-quality-assurance-testing-services.html">QA &amp; Testing</a></li>
+                <li><a href="outsource-software-product-development-services.html">Product Engineering</a></li>
+                <li><a href="digital-transformation-services.html">Digital Transformation</a></li>
+              </ul>
+              <a href="enterprise-software-development-services.html" class="is-arrow">Get Details</a>
+            </div>
+            <div class="content " id="welm-3">
+              <h3><a href="agencies-software-development-services.html">Agencies</a></h3>
+              <p>We partner with agencies to help them deliver innovative IT solutions and get a competitive edge.</p>
+              <ul>
+                <li><a href="white-label-services.html">While Label Solutions</a></li>
+                <li><a href="outsource-software-product-development-services.html">Product Engineering</a></li>
+                <li><a href="digital-transformation-services.html">Digital Transformation</a></li>
+                <li><a href="it-staff-augmentation-services.html">Staff Augmentation</a></li>
+              </ul>
+              <a href="agencies-software-development-services.html" class="is-arrow">Get Details</a>
+            </div>
+          </div>
         </div>
-        <div style="flex: 1 1 30%; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-          <img src="../www.invertio.in/wp-content/themes/invertio/dev-img/aiml-about.jpg" alt="AI Automation" style="width: 100%; border-radius: 10px;" />
-          <h3 style="margin-top: 20px; color: #333;">AI/ML Automations</h3>
-          <p style="color: #666;">Custom-built machine learning models to automate workflows, detect patterns, and deliver predictive insights.</p>
-        </div>
-        <div style="flex: 1 1 30%; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-          <img src="../www.invertio.in/wp-content/themes/invertio/dev-img/skethes-about.jpg" alt="MVP Product" style="width: 100%; border-radius: 10px;" />
-          <h3 style="margin-top: 20px; color: #333;">MVPs & Dashboards</h3>
-          <p style="color: #666;">From wireframes to production-ready software, we help clients validate and scale digital products globally.</p>
-        </div>
+        <div class="image-container"><img src="wp-content/uploads/2025/02/work-01.webp" alt="Startups"
+            class="tab-image active" id="img-welm-1"><img src="wp-content/uploads/2025/02/Enterprises.jpg"
+            alt="Enterprises" class="tab-image " id="img-welm-2"><img src="wp-content/uploads/2025/02/agencies.avif"
+            alt="Agencies" class="tab-image " id="img-welm-3"></div>
       </div>
     </div>
   </section>
@@ -2850,7 +2899,7 @@ team spirit &amp; dedication toward the common goal of client satisfaction.</p>
     <div class="footer-copyright">
   <div class="container">
   <div class="copyrigh-cont">  
-    <div class="cright">Copyright &copy; 2004 - 2025 Invertio Solutions, All Rights Reserved. A Vinove Company.</div>
+    <div class="cright">Copyright &copy; 2023 - 2025 Invertio Solutions, All Rights Reserved.</div>
     <div class="cright-links">
     <ul>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
