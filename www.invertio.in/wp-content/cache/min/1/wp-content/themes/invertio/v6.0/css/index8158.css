@@ -2053,7 +2053,11 @@ textarea {
     }
 
     .flex-4 {
-        flex-basis: 50%
+        flex-basis: 50%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .flex-5 {

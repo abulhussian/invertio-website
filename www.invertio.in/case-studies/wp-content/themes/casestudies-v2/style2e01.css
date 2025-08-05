@@ -599,6 +599,13 @@ h2 {font-size: 32px; line-height: 44px;}
         font-family: sans-serif;
         line-height: 24px;
       }
+      .flex-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
      
     .left-bar ul li a{font-size:16px; line-height:28px;}
@@ -749,7 +756,7 @@ display:-webkit-box; -webkit-line-clamp:3; line-clamp:3; -webkit-box-orient: ver
 }
 
 @media only screen and (max-width: 991px) {
-.full-width-two-column .other-details .flex-2 {flex-basis: 50%;}
+.full-width-two-column .other-details .flex-2 {flex-basis: 50%; }
 .full-width-two-column p {font-size: 16px;}
 .full-width-two-column .content-box{max-width: 100%;}
 }
