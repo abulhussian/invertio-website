@@ -5379,7 +5379,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 }
 .success-slider-section {
   overflow: hidden;
-  background: #D3D3D3; /* light gray background */
+  background: white; /* light gray background */
   border-radius: 12px; /* rounded corners */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* soft shadow */
 }
@@ -6413,7 +6413,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 .header-two .header-item-right {
     flex-basis: 80%;
     display: flex;
-    justify-content:right;
+    justify-content: right;     
     align-items: center;
     gap: 70px;
 }
@@ -8798,7 +8798,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 }
 
 .hero-section .dis-flex .left-box h1 {
-    font-size: 45px;
+    font-size: 30px;
     line-height: 1.5;
     color: #fff
 }
@@ -8871,8 +8871,8 @@ body.page-template-template-testimonials .client-video-section iframe,
     justify-content: center;
     z-index: 1;
     position: absolute;
-    bottom: 45px;
-    right: 0px
+    bottom: 40px;
+    right: 30px;
 }
 
 .hero-section .scroll-next .scroll-downicon {
