@@ -2037,409 +2037,180 @@ function consultCTA_cb(){
       </div>
     </div>
   </header>
-  <section class="hero-section" id="homepage-hero-section">
-    <video class="row-lg vd-lazy" id="background-video" loop autoplay muted playsinline>
-      <source src="../www.invertio.in/wp-content/themes/invertio/video/home-video.mp4" type="video/mp4">
+ <section class="hero-section" id="homepage-hero-section" style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); padding-top: 70px;">
+    <video class="row-lg vd-lazy" id="background-video" loop autoplay muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+        <source src="../www.invertio.in/wp-content/themes/invertio/video/home-video.mp4" type="video/mp4">
     </video>
-    <div class="container">
-      <div class="dis-flex" id="homepage-hero-flex" style="display: flex;">
-        <div class="left-box" id="homepage-hero-text"
-          style="width: 75%; padding-right: 30px; display: flex; flex-direction: column; justify-content: center;">
-          <h1>Custom Software,</h1>
-          <h1> Reliable Remote Teams &</h1>
-          <h1 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-            Scalable Solutions for your Needs
-          </h1>
-          <p>We are an Indian software engineering company focused on providing outsourced software
-            development and software engineering teams to our clients globally.</p>
-          <style>
-            /* Hide all cards by default */
-            .logo-card {
-              display: none;
-              border: 1px solid #ccc;
-              padding: 20px;
-              margin-top: 20px;
-              border-radius: 10px;
-              width: 1000px;
-              height: 300px;
-              font-family: 'Segoe UI', sans-serif;
-              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-              overflow: hidden;
-              flex-direction: row;
-              align-items: center;
-            }
-
-            /* Style for logo buttons container */
-            .clients {
-              display: flex;
-              /* flex container for horizontal row */
-              justify-content:start;
-              /* center the entire row */
-              align-items: start;
-              /* vertically center logos */
-              gap: 15px;
-              /* space between logos */
-              flex-wrap: nowrap;
-              /* keep all logos in one line, no wrapping */
-              padding: 10px;
-              margin-bottom: 20px;
-            }
-
-            .clients a {
-              display: inline-flex;
-              /* inline flex for logo container */
-              align-items: start;
-              /* vertically center logo images */
-              padding: 8px 12px;
-              /* smaller padding around each logo */
-              /* white background for each button */
-              border-radius: 8px;
-              cursor: pointer;
-              transition: all 0.3s ease;
-              max-width: 300px;
-              /* limit max width to reduce size */
-              overflow: hidden;
-              /* hide overflow for neatness */
-            }
-
+    
+    <div class="container" style="position: relative; z-index: 5; width: 100%; max-width: 1450px; margin: 0 auto; padding: 10px;">
+        <div class="dis-flex" id="homepage-hero-flex" style="display: flex; flex-direction: row; align-items: flex-start; gap: 40px; flex-wrap: wrap; justify-content: space-between;">
             
+            <!-- Left Content -->
+            <div class="left-box" id="homepage-hero-text" style="flex: 1; min-width: 300px;  display: flex; flex-direction: column; justify-content: center; margin-top: 20px; padding-right: 5px;  ">
+                <h1 style="color: #ffffff; font-size: clamp(24px, 3.5vw, 42px); font-weight: 700; line-height: 1.5; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); white-space: nowrap; overflow: hidden; text-overflow: clip;">Custom Software,</h1>
+                <h1 style="color: #ffffff; font-size: clamp(24px, 3.5vw, 42px); font-weight: 700; line-height: 1.5; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); white-space: nowrap; overflow: hidden; text-overflow: clip;">Reliable Remote Teams &</h1>
+                <h1 style="color: #ffffff; font-size: clamp(18px, 3.5vw, 42px); font-weight: 700; line-height: 1.5; margin-bottom: 25px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); white-space: nowrap; overflow: hidden; text-overflow: clip;">Scalable Solutions for your Needs</h1>
 
-            .clients img {
-              height: 52px;
-              /* smaller height to reduce image size */
-              width: auto;
-              display: block;
-              filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
-              /* subtle shadow */
-              max-width: 100%;
-              /* avoid overflow inside the a tag */
-              object-fit: contain;
-              /* preserve aspect ratio */
-            }
-          </style>
+                <p style="color: rgba(255,255,255,0.95); font-size: clamp(14px, 1.8vw, 18px); line-height: 2; margin-bottom: 35px; max-width: 700px; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">We are an Indian software engineering company focused on providing outsourced software development and software engineering teams to our clients globally.</p>
 
+                <!-- Logo Button Row -->
+                <div class="clients" style="display: flex; justify-content: flex-start; align-items: center; gap: 20px; flex-wrap: wrap; padding: 10px 0; margin-bottom: 20px;">
+                    <a href="#govt-card-1" style="display: inline-flex; align-items: center; padding: 10px 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; max-width: 300px; overflow: hidden; background: rgba(255,255,255,0.95); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img src="../www.invertio.in/wp-content/themes/invertio/images/govt-1.jpeg" alt="govt-1ogo" style="height: 52px; width: auto; display: block; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15)); max-width: 100%; object-fit: contain;">
+                    </a>
+                    <a href="#sgovt-card-2" style="display: inline-flex; align-items: center; padding: 10px 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; max-width: 300px; overflow: hidden; background: rgba(255,255,255,0.95); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <img src="../www.invertio.in/wp-content/themes/invertio/images/govt-2.jpeg" alt="Samsa Logo" style="height: 52px; width: auto; display: block; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15)); max-width: 100%; object-fit: contain;">
+                    </a>
+                </div>
+            </div>
 
+            <!-- Right Side Container -->
+            <div class="right-side" style="display: flex; flex-direction: column; gap: 30px; min-width: 300px; max-width: 410px; width: 100%; margin: 20px auto 0;">
+                <!-- Contact Form -->
+                <div class="right-box-form" id="homepage-hero-form" style="width: 100%; background: #ffffff; z-index: 10; border-radius: 25px; box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2); position: relative; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden;">
+                    <!-- Header -->
+                    <div class="hero-form-header" style="padding: 20px; background-color: #fcb900; border-top-left-radius: 25px; border-top-right-radius: 25px; display: flex; justify-content: center; align-items: center;">
+                        <h3 style="font-size: clamp(16px, 2vw, 20px); color: #05164d; margin: 0; font-weight: 700; letter-spacing: 0.5px; text-align: center;">Get a Free Consultation</h3>
+                    </div>
+                    <!-- Form -->
+                    <form id="heroContactForm" class="hero-form-fields" style="padding: 25px;">
+                        <!-- Name & Email -->
+                        <div class="hero-form-row" style="display: flex; gap: 15px; margin-bottom: 15px; flex-direction: column;">
+                            <div class="form-field">
+                                <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 12px 15px; border: 1.5px solid #e0e0e0; border-radius: 8px; font-size: 15px; font-family: inherit; background: #f7f8fa; transition: all 0.3s; outline: none; color: #333;">
+                            </div>
+                            <div class="form-field">
+                                <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 12px 15px; border: 1.5px solid #e0e0e0; border-radius: 8px; font-size: 15px; font-family: inherit; background: #f7f8fa; transition: all 0.3s; outline: none; color: #333;">
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="form-field">
+                            <input type="tel" name="phone" placeholder="Phone" style="width: 100%; padding: 12px 15px; border: 1.5px solid #e0e0e0; border-radius: 8px; font-size: 15px; font-family: inherit; background: #f7f8fa; transition: all 0.3s; outline: none; color: #333;">
+                        </div>
+                        <!-- Requirements -->
+                        <div class="form-field">
+                            <textarea name="requirements" placeholder="Project Requirements" rows="4" style="width: 100%; padding: 12px 15px; border: 1.5px solid #e0e0e0; border-radius: 8px; font-size: 15px; font-family: inherit; background: #f7f8fa; transition: all 0.3s; outline: none; resize: vertical; min-height: 90px; color: #333;"></textarea>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="form-actions" style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+                            <button type="submit" class="cta-button-1" style="background: #fcb900; color: #05164d; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-size: 16px; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 12px rgba(252, 185, 0, 0.3); width: auto; min-width: 180px;">Submit Request</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
 
-
-
-          <!-- Logo Button Row -->
-          <div class="clients">
-            <a href="#govt-card-1">
-              <img src="../www.invertio.in/wp-content/themes/invertio/images/govt-1.jpeg" alt="govt-1ogo" />
-            </a>
-            <a href="#sgovt-card-2">
-              <img src="../www.invertio.in/wp-content/themes/invertio/images/govt-2.jpeg" alt="Samsa Logo" />
-            </a>
-          </div>
+                 <!-- Scroll Down Button - Fixed Position -->
+         
+            </div>
+          
         </div>
-        <style>
-          .right-box-form {
-            width: 25%;
-            background: #ffffff;
-            z-index: 10;
-            border-radius: 25px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            position: relative;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
-            min-width: 330px;
-            max-width: 410px;
-            margin: 0 auto;
-          }
-
-          .hero-form-header {
-            padding: 24px 20px 16px;
-            background-color: #fcb900;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .hero-form-header h3 {
-            font-size: 25px;
-            color: #05164d;
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-          }
-
-          .hero-form-fields {
-            padding: 30px 25px 20px;
-          }
-
-          .hero-form-row {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 18px;
-          }
-
-          .form-field {
-            flex: 1;
-            margin-bottom: 18px;
-          }
-
-          .form-field:last-child {
-            margin-bottom: 22px;
-          }
-
-          input[type="text"],
-          input[type="email"],
-          input[type="tel"],
-          textarea {
-            width: 100%;
-            padding: 13px 15px;
-            border: 1.5px solid #ececec;
-            border-radius: 10px;
-            font-size: 16px;
-            font-family: inherit;
-            background: #f7f8fa;
-            transition: border 0.3s, box-shadow 0.3s;
-            outline: none;
-            box-shadow: none;
-          }
-
-          input[type="text"]:focus,
-          input[type="email"]:focus,
-          input[type="tel"]:focus,
-          textarea:focus {
-            border: 1.5px solid #fcb900;
-            box-shadow: 0 1px 5px rgba(252, 185, 0, 0.12);
-            background: #fffde6;
-          }
-
-          textarea {
-            resize: vertical;
-            min-height: 80px;
-            font-size: 15.5px;
-          }
-
-          .cta-button-1 {
-            background: #fcb900;
-            color: #05164d;
-            border: none;
-            padding: 13px 0;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 17px;
-            font-weight: 700;
-            width: 60%;
-            transition: background 0.25s, transform 0.22s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(252, 185, 0, 0.09);
-          }
-
-          .cta-button-1:hover,
-          .cta-button-1:focus {
-            background: #ffce36;
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 4px 16px rgba(252, 185, 0, 0.19);
-          }
-
-          .form-actions {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 0;
-          }
-
-          /* Scroll Next Styling */
-          .scroll-next {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5px auto 16px;
-            border: none;
-            background: transparent;
-            text-decoration: none;
-          }
-
-          .scroll-downicon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3px;
-          }
-
-          .scroll-down-text {
-            color: #05164d;
-            font-size: 14px;
-            margin-top: 2px;
-            letter-spacing: 0.1em;
-            font-weight: 500;
-          }
-
-          @media (max-width: 700px) {
-            .right-box-form {
-              width: 98%;
-              min-width: unset;
-              max-width: unset;
-              margin: 15px auto;
-              border-radius: 20px;
-            }
-
-            .hero-form-fields {
-              padding: 20px 8px 12px;
-            }
-
-            .hero-form-header {
-              padding: 16px 8px 8px;
-            }
-          }
-        </style>
-        <div class="right-side" style="display: flex; gap: 50px;">
-        <!-- Contact Form on Right Side -->
-        <div class="right-box-form" id="homepage-hero-form">
-          <!-- Header -->
-          <div class="hero-form-header">
-            <h3>Get a Free Consultation</h3>
-          </div>
-          <!-- Form -->
-          <form id="heroContactForm" class="hero-form-fields">
-            <!-- Name & Email -->
-            <div class="hero-form-row">
-              <div class="form-field">
-                <input type="text" name="name" placeholder="Name" required>
-              </div>
-              <div class="form-field">
-                <input type="email" name="email" placeholder="Email" required>
-              </div>
-            </div>
-            <!-- Phone -->
-            <div class="form-field">
-              <input type="tel" name="phone" placeholder="Phone">
-            </div>
-            <!-- Requirements -->
-            <div class="form-field">
-              <textarea name="requirements" placeholder="Project Requirements" rows="4"></textarea>
-            </div>
-            <!-- Submit Button -->
-            <div class="form-actions">
-              <button type="submit" class="cta-button-1">Submit Request</button>
-            </div>
-          </form>
-
-        </div>
-        <div>
-        <a class="scroll-next" href="#serv">
+        
+         <a class="scroll-next " href="#serv" style="margin-top: 50px !important;" >
           <span class="scroll-downicon">
             <!-- Professional scroll down SVG icon -->
-            <svg width="26" height="26" fill="#05164d" viewBox="0 0 26 26" style="display:block; margin:0 auto;">
+            <svg width="26" height="26" fill="#05164d" viewBox="0 0 26 26" style="display:block; margin-bottom:25px auto;">
             </svg>
           </span>
         </a>
-        </div>
-        </div>
+    </section>
 
+    <!-- Next Section (Placeholder) -->
+   
 
-
-        <style>
-          /* Ultra-specific styling ONLY for this exact hero section */
-          #homepage-hero-section #homepage-hero-flex {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: flex-start !important;
-            gap: 20px !important;
-            flex-wrap: nowrap !important;
-          }
-
-          /* Force side by side layout only for this specific section */
-          #homepage-hero-section #homepage-hero-text {
-            flex: 0 0 60% !important;
-          }
-
-          #homepage-hero-section #homepage-hero-form {
-            flex: 0 0 40% !important;
-          }
-
-          /* Video styling only for this specific hero section */
-          #homepage-hero-section #background-video {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            z-index: 1 !important;
-          }
-
-          #homepage-hero-section {
-            position: relative !important;
-            overflow: hidden !important;
-          }
-
-          #homepage-hero-section .container {
-            position: relative !important;
-            z-index: 5 !important;
-          }
-
-          /* Button hover effect only for this hero section */
-          #homepage-hero-section #homepage-hero-form .cta-button-1:hover {
-            background: #05164d !important;
-            color: white !important;
-          }
-
-          /* Form input focus states only for this hero section */
-          #homepage-hero-section #homepage-hero-form input:focus,
-          #homepage-hero-section #homepage-hero-form textarea:focus {
-            outline: none !important;
-            border-color: #05164d !important;
-            color: white;
-            box-shadow: 0 0 0 2px rgba(96, 183, 65, 0.2) !important;
-          }
-
-          /* Responsive adjustments ONLY for this hero section */
-          @media (max-width: 991px) {
-            #homepage-hero-section #homepage-hero-flex {
-              flex-direction: column !important;
-              gap: 30px !important;
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
             }
-
-            #homepage-hero-section #homepage-hero-text,
-            #homepage-hero-section #homepage-hero-form {
-              flex: 1 1 100% !important;
-              width: 100% !important;
-              padding-right: 0 !important;
+            header nav ul {
+                gap: 15px;
             }
-          }
-        </style>
+            .clients{
+              display: flex;
+              justify-content: center !important;
+              align-items: center !important;
+            }
+            #homepage-hero-section {
+                padding-top: 60px;
+            }
+            #homepage-hero-flex {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .right-box-form {
+                max-width: 100%;
+            }
+            .scroll-next {
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+    </style>
 
-        <script>
-          // Form submission handler for API call
-          document.getElementById('heroContactForm').addEventListener('submit', function (e) {
+    <script>
+        // Form submission handler for API call
+        document.getElementById('heroContactForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
             const formData = new FormData(this);
             const data = {
-              fullName: formData.get('name'),
-              email: formData.get('email'),
-              phone: formData.get('phone'),
-              description: formData.get('requirements')
+                fullName: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                description: formData.get('requirements')
             };
 
-            // Replace with your actual API endpoint
             fetch('https://invertio-query.onrender.com/api/query', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(data)
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
             })
-              .then(response => response.json())
-              .then(data => {
-                console.log('Success:', data);
-                alert('Thank you! Your request has been submitted successfully.');
-                this.reset();
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-                alert('Sorry, there was an error submitting your request. Please try again.');
-              });
-          });
-        </script>
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Thank you! Your request has been submitted successfully.');
+                    this.reset();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Sorry, there was an error submitting your request. Please try again.');
+                });
+        });
+
+        // Adjust hero section height to account for header
+        function adjustHeroHeight() {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const heroSection = document.getElementById('homepage-hero-section');
+            heroSection.style.paddingTop = headerHeight + 'px';
+            
+            const contentHeight = document.getElementById('homepage-hero-flex').offsetHeight;
+            const viewportHeight = window.innerHeight;
+            
+            if (contentHeight + headerHeight + 100 > viewportHeight) {
+                heroSection.style.minHeight = (contentHeight + headerHeight + 100) + 'px';
+            } else {
+                heroSection.style.minHeight = '100vh';
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', function() {
+            adjustHeroHeight();
+            setTimeout(adjustHeroHeight, 300);
+        });
+        window.addEventListener('resize', adjustHeroHeight);
+    </script>
 
 
-  </section>
+  
   <section class="success-slider-section padding-t-120 padding-b-120">
     <div class="container">
       <div class="top-section b-100">
@@ -2679,7 +2450,7 @@ function consultCTA_cb(){
               <h3><a href="software-development-services-company.html">Software Development</a></h3>
               <p>Power up your business with custom software development solutions. We build innovative,
                 high-performing, and scalable software that help businesses like yours thrive.</p>
-              <ul>
+              <ul >
                 <li><a href="software-development-services-company.html">Custom Software Development</a></li>
                 <li><a href="software-development-services-company.html">Nearshore Software Development</a></li>
                 <li><a href="software-development-services-company.html">Software development</a></li>

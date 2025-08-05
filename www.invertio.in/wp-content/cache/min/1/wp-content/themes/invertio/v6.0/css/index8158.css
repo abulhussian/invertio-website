@@ -3041,7 +3041,8 @@ body.page-template-template-testimonials .client-video-section iframe,
     justify-content: space-between;
     padding: 15px;
     border-radius: 10px;
-    gap: 20px
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .tabs-section .tabs-container .tabs .tab {
