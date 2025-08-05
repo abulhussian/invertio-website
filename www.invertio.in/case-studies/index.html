@@ -1173,16 +1173,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     </div>
   </div>
 </header><section class="full-width-two-column">
-  <div class="container" style="display: flex; flex-direction: column; gap: 40px;">
-
-  <!-- Reusable card style -->
-  <!-- Project Template -->
   <style>
+    /* Container & Layout */
+    .project-cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 12px;
+    }
+
+    /* Card Styles */
     .project-card {
       display: flex;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      /* background: white; */
+      transition: box-shadow 0.3s;
+      margin: 0;
     }
 
     .project-card.reverse {
@@ -1191,11 +1201,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
 
     .project-image {
       width: 50%;
+      min-width: 200px;
       height: 400px;
       background-size: cover;
       background-position: center;
       border-radius: 10px 0 0 10px;
-      transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+      transition: transform 0.5s, border-radius 0.5s;
+      position: relative;
     }
 
     .project-card.reverse .project-image {
@@ -1205,22 +1217,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     .project-image:hover {
       transform: scale(1.05);
       border-radius: 10px;
+      z-index: 2;
     }
 
     .project-content {
       padding: 30px;
       width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .project-content h3 {
       font-size: 24px;
-      color: white;
+      color: #fcb900;
       margin-bottom: 10px;
     }
 
     .project-content p {
-      color: #555;
+      color: #fff;
       margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     .project-content p:last-of-type {
@@ -1234,32 +1252,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
       font-weight: bold;
     }
 
-    /* Dark overlay for specific images */
-    .overlay {
-      position: relative;
-    }
-
+    /* Overlay for certain images */
+    .overlay { position: relative; }
     .overlay::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.3);
       z-index: 1;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.3);
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 900px) {
+      .project-card,
+      .project-card.reverse {
+        flex-direction: column !important;
+        min-height: unset;
+      }
+      .project-image,
+      .project-card.reverse .project-image {
+        width: 100%;
+        height: 220px;
+        border-radius: 10px 10px 0 0 !important;
+      }
+      .project-content {
+        width: 100%;
+        padding: 20px 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .project-cards-container {
+        gap: 24px;
+        padding: 15px 5px;
+      }
+      .project-content h3 {
+        font-size: 20px;
+      }
+      .project-content p,
+      .project-content p:last-of-type {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+      .project-image,
+      .project-card.reverse .project-image {
+        height: 150px;
+      }
     }
   </style>
+</head>
+<body>
 
+<div class="project-cards-container">
   <!-- Project 1 -->
   <div class="project-card">
     <div class="project-image" style="background-image: url('wp-content/uploads/2025/06/berd-thumb.png');"></div>
     <div class="project-content">
-      <h3 style="color:#fcb900 ;">QATAR MOEHE</h3>
-      <p style="color: white; font-size:small ;">Ministry of Education Reward Portal.</p>
-      <p style="color: white; font-size:smaller ;">Our team proudly developed the Ministry of Education Rewards Portal,
-a groundbreaking platform that encourages online learning among
-students and teachers. This bilingual admin portal and mobile app
-enable users to earn points for educational activities, fostering engagement and knowledge acquisition.</p>
-      <p style="color:#fcb900 " ><strong>Core tech:</strong> Angular, NODE.JS, PostgreSQL</p>
+      <h3>QATAR MOEHE</h3>
+      <p style="font-size:small;">Ministry of Education Reward Portal.</p>
+      <p style="font-size:smaller;">
+        Our team proudly developed the Ministry of Education Rewards Portal,
+        a groundbreaking platform that encourages online learning among
+        students and teachers. This bilingual admin portal and mobile app
+        enable users to earn points for educational activities, fostering engagement and knowledge acquisition.
+      </p>
+      <p><strong>Core tech:</strong> Angular, NODE.JS, PostgreSQL</p>
       <a href="qatar-moehe/index.html">Learn More →</a>
     </div>
   </div>
@@ -1268,10 +1327,12 @@ enable users to earn points for educational activities, fostering engagement and
   <div class="project-card reverse">
     <div class="project-image overlay" style="background-image: url('wp-content/uploads/2025/05/resume-thumb.webp');"></div>
     <div class="project-content">
-      <h3 style="color:#fcb900 ;">BaladiExpress Mart</h3>
-      <p style="color: white; font-size:small ;">Modern retail brand delivering convenience and affordability in Qatar.</p>
-      <p style="color: white; font-size:smaller ;">Our team successfully delivered the BaladiExpress Mart platform, a modern retail solution designed to enhance everyday shopping convenience in Qatar. This comprehensive system integrates a user-friendly web interface and mobile app that empower customers to browse, order, and manage their grocery needs effortlessly. With features like real-time inventory, location-based delivery, and digital promotions, the platform drives customer engagement and streamlines operational efficiency for retailers.</p>
-      <p style="color:#fcb900 "><strong>Core tech:</strong> Angular, NODE.JS, Python</p>
+      <h3>BaladiExpress Mart</h3>
+      <p style="font-size:small;">Modern retail brand delivering convenience and affordability in Qatar.</p>
+      <p style="font-size:smaller;">
+        Our team successfully delivered the BaladiExpress Mart platform, a modern retail solution designed to enhance everyday shopping convenience in Qatar. This comprehensive system integrates a user-friendly web interface and mobile app that empower customers to browse, order, and manage their grocery needs effortlessly. With features like real-time inventory, location-based delivery, and digital promotions, the platform drives customer engagement and streamlines operational efficiency for retailers.
+      </p>
+      <p><strong>Core tech:</strong> Angular, NODE.JS, Python</p>
       <a href="baladiexpressmart/index.html">Learn More →</a>
     </div>
   </div>
@@ -1280,15 +1341,17 @@ enable users to earn points for educational activities, fostering engagement and
   <div class="project-card">
     <div class="project-image" style="background-image: url('wp-content/uploads/2025/07/livestage-thumb.png');"></div>
     <div class="project-content">
-      <h3 style="color:#fcb900 ;">Single View</h3>
-      <p style="color: white; font-size:small ;">Data intelligence platform with a 360° view for better decisions.</p>
-      <p style="color: white; font-size:smaller ;">Our team developed connector to integrate various erp systems with
-their platform like Oracle NetSuite, Oracle Fusion, EBS, SAP. This
-helped high degree of flexibility, allowing its business to synchronize
-data and workflows based on automation and highlights were Improved
-Data Consistency, Streamlined Business Processes, Better Decision
-Making, Increased Efficiency</p>
-      <p style="color:#fcb900 "><strong>Core tech:</strong> AWS, MongoDB, Node.js/Express, React Native</p>
+      <h3>Single View</h3>
+      <p style="font-size:small;">Data intelligence platform with a 360° view for better decisions.</p>
+      <p style="font-size:smaller;">
+        Our team developed connector to integrate various ERP systems with
+        their platform like Oracle NetSuite, Oracle Fusion, EBS, SAP. This
+        helped high degree of flexibility, allowing its business to synchronize
+        data and workflows based on automation and highlights were Improved
+        Data Consistency, Streamlined Business Processes, Better Decision
+        Making, Increased Efficiency.
+      </p>
+      <p><strong>Core tech:</strong> AWS, MongoDB, Node.js/Express, React Native</p>
       <a href="single-view/index.html">Learn More →</a>
     </div>
   </div>
@@ -1297,15 +1360,16 @@ Making, Increased Efficiency</p>
   <div class="project-card reverse">
     <div class="project-image" style="background-image: url('wp-content/uploads/2025/07/teach-thumb.png');"></div>
     <div class="project-content">
-      <h3 style="color:#fcb900 ;">SMSA Express</h3>
-      <p style="color: white; font-size:small ;">Logistics & supply chain company with strong Saudi infrastructure.</p>
-      <p style="color: white;font-size:smaller ;">SMSA Express is a Saudi Arabian logistics and fulfillment company
-founded in 1994 in Riyadh. Our team developed a new generation
-billing system aiming to allow the B2B users of SMSA express to view
-their invoices and complete the payments. Key benefits achieved are
-product bundling and assembly, and real-time order tracking.
-</p>
-      <p style="color:#fcb900 "><strong>Core tech:</strong> Flutter, Next.js, React</p>
+      <h3>SMSA Express</h3>
+      <p style="font-size:small;">Logistics & supply chain company with strong Saudi infrastructure.</p>
+      <p style="font-size:smaller;">
+        SMSA Express is a Saudi Arabian logistics and fulfillment company
+        founded in 1994 in Riyadh. Our team developed a new generation
+        billing system aiming to allow the B2B users of SMSA express to view
+        their invoices and complete the payments. Key benefits achieved are
+        product bundling and assembly, and real-time order tracking.
+      </p>
+      <p><strong>Core tech:</strong> Flutter, Next.js, React</p>
       <a href="smsa-express/index.html">Learn More →</a>
     </div>
   </div>
@@ -1314,20 +1378,20 @@ product bundling and assembly, and real-time order tracking.
   <div class="project-card" style="margin-bottom: 50px;">
     <div class="project-image" style="background-image: url('wp-content/uploads/2025/06/travel-thumb.png');"></div>
     <div class="project-content">
-      <h3 style="color:#fcb900 ;">AI Pilot</h3>
-      <p style="color: white;font-size:small ;">Smart Child Health Monitoring System.</p>
-      <p style="color: white;font-size:smaller ;">AI-powered anthropometric model with 98–99% accurate
-height estimation, BLE-enabled height measurement, and
-instant BMI calculation, integrated into a real-time child
-health monitoring system. Enables personalized nutrition
-plans and has been implemented pilot with the UP
-Government (Anganwadis).</p>
-
-      <p style="color:#fcb900 "><strong>Core tech:</strong> ReactNative, Node.js, NextJS</p>
+      <h3>AI Pilot</h3>
+      <p style="font-size:small;">Smart Child Health Monitoring System.</p>
+      <p style="font-size:smaller;">
+        AI-powered anthropometric model with 98–99% accurate
+        height estimation, BLE-enabled height measurement, and
+        instant BMI calculation, integrated into a real-time child
+        health monitoring system. Enables personalized nutrition
+        plans and has been implemented pilot with the UP
+        Government (Anganwadis).
+      </p>
+      <p><strong>Core tech:</strong> ReactNative, Node.js, NextJS</p>
       <a href="ai-pilot/index.html">Learn More →</a>
     </div>
   </div>
-
 </div>
 
 <!-- </div><div class="flex-2 col-box block-id-6 full-image">
